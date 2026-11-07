@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works — S.W.A.P | School Substitution Workflow</title>
+  <meta name="description" content="A simple, four-step routine: Upload Timetables, Mark Absences, Generate Substitutions, and Monitor Availability.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How It Works — S.W.A.P">
+  <meta property="og:description" content="A simple 4-step workflow designed for school administrators.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       GLOBAL NAVBAR
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link" aria-label="S.W.A.P Home">
+        <img src="assets/logo.png" alt="S.W.A.P Logo" class="brand-logo" width="32" height="32">
+        <div class="brand-text">
+          <span class="brand-title">S.W.A.P</span>
+          <span class="brand-subtitle">Smart Workflow Allocation &amp; Placement</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="product.html" class="nav-item">Product</a>
+        <a href="how-it-works.html" class="nav-item active">How It Works</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="mailto:coretechnologiesofficial@gmail.com?subject=SWAP%20Demo%20Request%20-%20[School%20Name]&body=Hello%20CORE%20Technologies%20Team%2C%0A%0AWe%20are%20interested%20in%20learning%20more%20about%20S.W.A.P%20for%20our%20institution.%0A%0ASchool%20Name%3A%0AContact%20Person%3A%0ADesignation%20(Principal%20%2F%20Vice%20Principal%20%2F%20Administrator)%3A%0APhone%20Number%3A%0AEstimated%20Faculty%20Size%3A%0A%0AThank%20you." class="btn btn-primary btn-sm nav-cta">Request a Demo</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="product.html" class="mobile-link">Product</a>
+        <a href="how-it-works.html" class="mobile-link active">How It Works</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+        <div class="mobile-cta-wrapper">
+          <a href="mailto:coretechnologiesofficial@gmail.com?subject=SWAP%20Demo%20Request%20-%20[School%20Name]&body=Hello%20CORE%20Technologies%20Team%2C%0A%0AWe%20are%20interested%20in%20learning%20more%20about%20S.W.A.P%20for%20our%20institution.%0A%0ASchool%20Name%3A%0AContact%20Person%3A%0ADesignation%3A%0APhone%20Number%3A%0A%0AThank%20you." class="btn btn-primary btn-block">Request a Demo</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       PAGE CONTENT: HOW IT WORKS
+       ========================================================================= -->
+  <main>
+    
+    <section class="section how-it-works-hero">
+      <div class="container">
+        <div class="section-tag">Four-Step Process</div>
+        <h1 class="section-title">How SWAP operates in a school's daily routine.</h1>
+        <p class="section-subtitle">
+          A straightforward, sequential workflow designed to turn stressful morning substitution coordination into a calm, reliable two-minute task.
+        </p>
+      </div>
+    </section>
+
+    <!-- Vertical Process Flow -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        
+        <div class="workflow-steps-vertical">
+          
+          <!-- Step 1 -->
+          <div class="step-row-card">
+            <div class="step-indicator">01</div>
+            <div class="step-main-content">
+              <h2 class="step-heading">STEP 01 — Upload Timetables</h2>
+              <p class="step-desc">
+                Import your faculty master schedule and student class-wise timetable files into SWAP. The system parses all periods, class sections, teacher pairings, and room assignments, establishing the school's private timetable baseline.
+              </p>
+            </div>
+            <div class="step-badge-col">
+              <span class="step-frequency">Term Setup</span>
+              <span class="step-timing">Uploaded once at term start</span>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-row-card">
+            <div class="step-indicator">02</div>
+            <div class="step-main-content">
+              <h2 class="step-heading">STEP 02 — Mark Absences</h2>
+              <p class="step-desc">
+                When leave notifications arrive in the morning, the administrative coordinator selects the absent teachers from a searchable faculty dropdown. The system instantly isolates every lecture and classroom affected for the day.
+              </p>
+            </div>
+            <div class="step-badge-col">
+              <span class="step-frequency">Daily Morning</span>
+              <span class="step-timing">Takes ~30 seconds</span>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-row-card">
+            <div class="step-indicator">03</div>
+            <div class="step-main-content">
+              <h2 class="step-heading">STEP 03 — Generate Substitutions</h2>
+              <p class="step-desc">
+                Click Generate to run the deterministic conflict check. SWAP evaluates every teacher free at each period, balances the workload (max 2 cover periods per teacher per day), and presents suggested substitutes with full manual override control.
+              </p>
+            </div>
+            <div class="step-badge-col">
+              <span class="step-frequency">Deterministic Check</span>
+              <span class="step-timing">Calculated in milliseconds</span>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-row-card">
+            <div class="step-indicator">04</div>
+            <div class="step-main-content">
+              <h2 class="step-heading">STEP 04 — Monitor Availability</h2>
+              <p class="step-desc">
+                Confirm the schedule to save it permanently into the historical log. Instantly export a clean printable daily substitution sheet for the staffroom noticeboard, while real-time availability views update with assigned duties marked in red.
+              </p>
+            </div>
+            <div class="step-badge-col">
+              <span class="step-frequency">Ready Before Assembly</span>
+              <span class="step-timing">Printable noticeboard sheets</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Design Principles -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Design Principles</div>
+          <h2 class="section-title">Built for administrative peace of mind.</h2>
+          <p class="section-subtitle">
+            Every step is designed to eliminate human error while leaving ultimate discretion in the hands of the academic coordinator.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="benefit-card">
+            <h3>Zero Double-Booking</h3>
+            <p>
+              Once a teacher is assigned a substitution or is scheduled for their regular class, the engine locks their availability for that period across all grids.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <h3>Coordinator Discretion</h3>
+            <p>
+              The software suggests the best available substitute, but the coordinator can reassign any lecture with a single dropdown click if subject continuity is preferred.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <h3>Local Offline Resilience</h3>
+            <p>
+              Designed to run locally within school administrative computers, ensuring morning substitution planning is never stalled by internet outages.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="home-cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="cta-heading">Experience the four-step workflow.</h2>
+          <p class="cta-subtext">
+            Contact our team to request a personalized demonstration of SWAP configured for your institution.
+          </p>
+          <a href="mailto:coretechnologiesofficial@gmail.com?subject=SWAP%20Demo%20Request%20-%20[School%20Name]&body=Hello%20CORE%20Technologies%20Team%2C%0A%0AWe%20are%20interested%20in%20learning%20more%20about%20S.W.A.P%20for%20our%20institution.%0A%0ASchool%20Name%3A%0AContact%20Person%3A%0ADesignation%3A%0APhone%20Number%3A%0A%0AThank%20you." class="btn btn-primary btn-lg">
+            Request a Demo
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       GLOBAL FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        
+        <div class="footer-brand">
+          <div class="footer-brand-header">
+            <img src="assets/logo.png" alt="S.W.A.P Logo" class="footer-logo" width="28" height="28">
+            <div>
+              <span class="footer-title">S.W.A.P</span>
+              <span class="footer-subtitle">Smart Workflow Allocation &amp; Placement</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Teacher substitutions, without the administrative chaos. A structured timetable and substitution management system for modern school administration.
+          </p>
+          <div class="footer-dev-tag">
+            A product by <strong>CORE Technologies</strong>.
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h4 class="footer-heading">Official Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-label">Email:</span>
+              <a href="mailto:coretechnologiesofficial@gmail.com" class="contact-link">
+                coretechnologiesofficial@gmail.com
+              </a>
+            </li>
+            <li>
+              <span class="contact-label">Phone:</span>
+              <a href="tel:+919082777586" class="contact-link">
+                +91 9082777586
+              </a>
+            </li>
+            <li>
+              <span class="contact-label">WhatsApp:</span>
+              <a href="https://wa.me/919082777586" target="_blank" rel="noopener noreferrer" class="contact-link">
+                +91 9082777586 (Chat)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; 2026 CORE Technologies. All rights reserved.
+        </p>
+        <p class="footer-meta">
+          Developed for educational institutions and school administration.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

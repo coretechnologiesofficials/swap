@@ -1,29 +1,104 @@
-import React from 'react'
-import Button from '../components/Button'
-import { DEMO_MAILTO_URL } from '../components/Navbar'
+import React, { useState } from 'react'
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    schoolName: '',
+    contactPerson: '',
+    designation: '',
+    officialEmail: '',
+    phone: '',
+    facultyCount: '50 to 100 Faculty',
+    currentSystem: 'Manual Paper Binders & Noticeboards',
+    notes: ''
+  })
+
+  const [errors, setErrors] = useState({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [mailtoUrl, setMailtoUrl] = useState('mailto:coretechnologiesofficial@gmail.com')
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: false }))
+    }
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const newErrors = {}
+    if (!formData.schoolName.trim()) newErrors.schoolName = true
+    if (!formData.contactPerson.trim()) newErrors.contactPerson = true
+    if (!formData.designation.trim()) newErrors.designation = true
+    if (!formData.officialEmail.trim()) newErrors.officialEmail = true
+    if (!formData.phone.trim()) newErrors.phone = true
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors)
+      return
+    }
+
+    setIsSubmitting(true)
+
+    const emailSubject = encodeURIComponent(`SWAP Demo Request - ${formData.schoolName}`)
+    const emailBody = encodeURIComponent(
+      `Hello CORE Technologies Team,
+
+` +
+      `We would like to request an institutional demonstration of S.W.A.P.
+
+` +
+      `School Name: ${formData.schoolName}
+` +
+      `Contact Person: ${formData.contactPerson}
+` +
+      `Designation: ${formData.designation}
+` +
+      `Official Email: ${formData.officialEmail}
+` +
+      `Phone Number: ${formData.phone}
+` +
+      `Approximate Faculty Size: ${formData.facultyCount}
+` +
+      `Current Timetable System: ${formData.currentSystem}
+` +
+      `Notes / Requirements: ${formData.notes}
+
+` +
+      `Thank you.`
+    )
+    const generatedMailto = `mailto:coretechnologiesofficial@gmail.com?subject=${emailSubject}&body=${emailBody}`
+    setMailtoUrl(generatedMailto)
+
+    setTimeout(() => {
+      setIsSubmitting(false)
+      setIsSubmitted(true)
+    }, 600)
+  }
+
   return (
     <div className="page-contact">
       
-      {/* Hero */}
+      {/* 1. CONTACT HERO */}
       <section className="section contact-hero">
         <div className="container">
-          <div className="section-tag">Direct Communication</div>
-          <h1 className="section-title">See how SWAP can work for your school.</h1>
+          <div className="section-tag">Direct Institutional Communication</div>
+          <h1 className="section-title">Schedule a Demonstration or Speak with Our Team</h1>
           <p className="section-subtitle">
-            Get in touch with CORE Technologies to discuss SWAP, request a demonstration, or explore institutional implementation for your school.
+            Connect directly with CORE Technologies to explore S.W.A.P. implementation, evaluate multi-grid timetable coverage, or request a customized demonstration for your school leadership.
           </p>
         </div>
       </section>
 
-      {/* Official Direct Contact Channels */}
-      <section className="section" style={{ paddingTop: 0 }}>
+      {/* 2. DIRECT CHANNELS GRID */}
+      <section className="section" style={{ paddingTop: 0, paddingBottom: '40px' }}>
         <div className="container">
           
           <div className="contact-channels-grid">
             
-            {/* Channel 1: Email */}
+            {/* Email Card */}
             <div className="contact-channel-card">
               <div className="channel-icon-wrap">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -32,20 +107,20 @@ export default function Contact() {
                 </svg>
               </div>
               <div className="channel-text-col">
-                <span className="channel-title">Official Email</span>
-                <a href={DEMO_MAILTO_URL} className="channel-main-val">
+                <span className="channel-title">Official Institutional Email</span>
+                <a href="mailto:coretechnologiesofficial@gmail.com" className="channel-main-val">
                   coretechnologiesofficial@gmail.com
                 </a>
                 <p className="channel-sub-desc">
-                  Opens a pre-addressed email draft with key institutional details ready to fill in.
+                  Direct inbox for school inquiries, proposal requests, and technical specifications. Monitored daily.
                 </p>
               </div>
-              <Button href={DEMO_MAILTO_URL} variant="outline" size="sm">
-                Send Email
-              </Button>
+              <a href="mailto:coretechnologiesofficial@gmail.com" className="btn btn-outline btn-sm">
+                Compose Email
+              </a>
             </div>
 
-            {/* Channel 2: Phone */}
+            {/* Telephone Card */}
             <div className="contact-channel-card">
               <div className="channel-icon-wrap">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -53,20 +128,20 @@ export default function Contact() {
                 </svg>
               </div>
               <div className="channel-text-col">
-                <span className="channel-title">Direct Telephone</span>
+                <span className="channel-title">Direct Telephone Desk</span>
                 <a href="tel:+919082777586" className="channel-main-val">
                   +91 9082777586
                 </a>
                 <p className="channel-sub-desc">
-                  Speak directly with our team regarding institutional inquiries and technical requirements.
+                  Speak directly with our team regarding institutional requirements and timetable consultations.
                 </p>
               </div>
-              <Button href="tel:+919082777586" variant="outline" size="sm">
+              <a href="tel:+919082777586" className="btn btn-outline btn-sm">
                 Call Direct
-              </Button>
+              </a>
             </div>
 
-            {/* Channel 3: WhatsApp */}
+            {/* WhatsApp Card */}
             <div className="contact-channel-card">
               <div className="channel-icon-wrap" style={{ color: '#16a34a' }}>
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -75,40 +150,257 @@ export default function Contact() {
               </div>
               <div className="channel-text-col">
                 <span className="channel-title">WhatsApp Communication</span>
-                <a
-                  href="https://wa.me/919082777586?text=Hello%20CORE%20Technologies%2C%20we%20are%20interested%20in%20a%20demonstration%20of%20SWAP%20for%20our%20school."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="channel-main-val"
-                >
+                <a href="https://wa.me/919082777586?text=Hello%20CORE%20Technologies%2C%20we%20are%20interested%20in%20a%20demonstration%20of%20SWAP%20for%20our%20school." target="_blank" rel="noopener noreferrer" class="channel-main-val">
                   +91 9082777586
                 </a>
                 <p className="channel-sub-desc">
-                  Instant messaging channel for administrative questions and quick scheduling queries.
+                  Instant messaging desk for administrative coordinators, quick scheduling questions, and appointment scheduling.
                 </p>
               </div>
-              <Button
-                href="https://wa.me/919082777586?text=Hello%20CORE%20Technologies%2C%20we%20are%20interested%20in%20a%20demonstration%20of%20SWAP%20for%20our%20school."
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="outline"
-                size="sm"
-              >
+              <a href="https://wa.me/919082777586?text=Hello%20CORE%20Technologies%2C%20we%20are%20interested%20in%20a%20demonstration%20of%20SWAP%20for%20our%20school." target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">
                 Chat on WhatsApp
-              </Button>
+              </a>
             </div>
 
           </div>
 
-          {/* Demonstration Callout Box */}
-          <div className="contact-demo-banner">
-            <h2 className="demo-banner-title">Request an Institutional Demonstration</h2>
-            <p className="demo-banner-text">
-              We provide guided demonstrations for school leadership teams, walking through your actual timetable structures and illustrating how SWAP operates under real-world faculty absence scenarios.
+        </div>
+      </section>
+
+      {/* 3. STRUCTURED INSTITUTIONAL DEMO REQUEST FORM */}
+      <section className="section section-alt" id="demo-form">
+        <div className="container">
+          <div className="section-header text-center">
+            <div className="section-tag">Institutional Onboarding</div>
+            <h2 className="section-title">Request an Institutional Demonstration</h2>
+            <p className="section-subtitle">
+              Provide key details regarding your school structure. We configure a personalized test workspace using your period bell schedule and faculty roster.
             </p>
-            <Button href={DEMO_MAILTO_URL} variant="primary" size="lg">
-              Request a Demo
-            </Button>
+          </div>
+
+          <div className="demo-form-card">
+            {!isSubmitted ? (
+              <form onSubmit={handleSubmit} noValidate>
+                <div className="demo-form-grid">
+                  
+                  {/* 1. School Name */}
+                  <div className={`form-group ${errors.schoolName ? 'has-error' : ''}`}>
+                    <label htmlFor="schoolName" className="demo-label">
+                      School / Institution Name <span className="req">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="schoolName"
+                      name="schoolName"
+                      value={formData.schoolName}
+                      onChange={handleChange}
+                      className="demo-input"
+                      placeholder="e.g. Pawar Public School"
+                      required
+                    />
+                    <span className="demo-error-msg">Please enter the name of your institution.</span>
+                  </div>
+
+                  {/* 2. Contact Person */}
+                  <div className={`form-group ${errors.contactPerson ? 'has-error' : ''}`}>
+                    <label htmlFor="contactPerson" className="demo-label">
+                      Contact Person &amp; Title <span className="req">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="contactPerson"
+                      name="contactPerson"
+                      value={formData.contactPerson}
+                      onChange={handleChange}
+                      className="demo-input"
+                      placeholder="e.g. Dr. Ramesh K. (Principal)"
+                      required
+                    />
+                    <span className="demo-error-msg">Please provide a contact person name.</span>
+                  </div>
+
+                  {/* 3. Designation */}
+                  <div className={`form-group ${errors.designation ? 'has-error' : ''}`}>
+                    <label htmlFor="designation" className="demo-label">
+                      Designation / Role <span className="req">*</span>
+                    </label>
+                    <select
+                      id="designation"
+                      name="designation"
+                      value={formData.designation}
+                      onChange={handleChange}
+                      className="demo-select"
+                      required
+                    >
+                      <option value="">Select your designation...</option>
+                      <option value="Principal">School Principal</option>
+                      <option value="Vice Principal">Vice Principal</option>
+                      <option value="Academic Coordinator">Academic Coordinator</option>
+                      <option value="Timetable Coordinator">Timetable Coordinator</option>
+                      <option value="School Administrator">School Administrator</option>
+                      <option value="IT Director / System Admin">IT Director / System Administrator</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <span className="demo-error-msg">Please select your administrative designation.</span>
+                  </div>
+
+                  {/* 4. Official Email */}
+                  <div className={`form-group ${errors.officialEmail ? 'has-error' : ''}`}>
+                    <label htmlFor="officialEmail" className="demo-label">
+                      Official Email Address <span className="req">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="officialEmail"
+                      name="officialEmail"
+                      value={formData.officialEmail}
+                      onChange={handleChange}
+                      className="demo-input"
+                      placeholder="e.g. principal@school.edu.in"
+                      required
+                    />
+                    <span className="demo-error-msg">Please provide a valid institutional email.</span>
+                  </div>
+
+                  {/* 5. Phone Number */}
+                  <div className={`form-group ${errors.phone ? 'has-error' : ''}`}>
+                    <label htmlFor="phone" className="demo-label">
+                      Telephone / Mobile Number <span className="req">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="demo-input"
+                      placeholder="e.g. +91 98765 43210"
+                      required
+                    />
+                    <span className="demo-error-msg">Please provide a direct telephone or mobile number.</span>
+                  </div>
+
+                  {/* 6. Faculty Size */}
+                  <div className="form-group">
+                    <label htmlFor="facultyCount" className="demo-label">
+                      Approximate Teaching Faculty Count
+                    </label>
+                    <select
+                      id="facultyCount"
+                      name="facultyCount"
+                      value={formData.facultyCount}
+                      onChange={handleChange}
+                      className="demo-select"
+                    >
+                      <option value="Under 50 Faculty">Under 50 Teaching Staff</option>
+                      <option value="50 to 100 Faculty">50 to 100 Teaching Staff</option>
+                      <option value="100 to 200 Faculty">100 to 200 Teaching Staff</option>
+                      <option value="200+ Faculty">200+ Teaching Staff</option>
+                    </select>
+                  </div>
+
+                  {/* 7. Current System */}
+                  <div className="form-group form-full-width">
+                    <label htmlFor="currentSystem" className="demo-label">
+                      Current Substitution &amp; Timetable Method
+                    </label>
+                    <select
+                      id="currentSystem"
+                      name="currentSystem"
+                      value={formData.currentSystem}
+                      onChange={handleChange}
+                      className="demo-select"
+                    >
+                      <option value="Manual Paper Binders & Noticeboards">Manual Paper Binders &amp; Staffroom Noticeboards</option>
+                      <option value="Excel / Google Spreadsheets">Spreadsheets (Excel / Google Sheets)</option>
+                      <option value="WhatsApp Groups">WhatsApp / Messaging Groups</option>
+                      <option value="Legacy Timetable Software">Existing Timetable Software</option>
+                      <option value="Other">Other Arrangement</option>
+                    </select>
+                  </div>
+
+                  {/* 8. Additional Notes */}
+                  <div className="form-group form-full-width">
+                    <label htmlFor="notes" className="demo-label">
+                      Timetable Structure &amp; Special Requirements (Optional)
+                    </label>
+                    <textarea
+                      id="notes"
+                      name="notes"
+                      value={formData.notes}
+                      onChange={handleChange}
+                      className="demo-textarea"
+                      placeholder="e.g. We have separate ICSE and ISC grids, 8 periods daily, zero periods on Tuesdays, and would like to test workload balancing."
+                    />
+                  </div>
+
+                  {/* Submit Button */}
+                  <div className="form-full-width" style={{ marginTop: '8px' }}>
+                    <button
+                      type="submit"
+                      className="btn btn-primary btn-lg form-submit-btn"
+                      disabled={isSubmitting}
+                      style={{ width: '100%' }}
+                    >
+                      {isSubmitting ? 'Verifying & Recording...' : 'Request Institutional Demonstration'}
+                    </button>
+                    <p style={{ fontSize: '0.8rem', color: '#64748b', textAlign: 'center', marginTop: '10px' }}>
+                      No obligations. We schedule a convenient 30-minute demonstration tailored to your school leadership team.
+                    </p>
+                  </div>
+
+                </div>
+              </form>
+            ) : (
+              <div className="demo-success-box visible" role="alert">
+                <h3 className="demo-success-title">Demonstration Request Recorded</h3>
+                <p className="demo-success-text">
+                  Thank you for requesting a demonstration of S.W.A.P. Our institutional team will review your timetable parameters and contact you within one school business day to confirm a demonstration time.
+                </p>
+                <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  <a href={mailtoUrl} className="btn btn-primary btn-sm">
+                    Send Direct Email Copy
+                  </a>
+                  <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="btn btn-outline btn-sm"
+                  >
+                    Submit Another Inquiry
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 4. WHAT HAPPENS DURING DEMONSTRATION */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header text-center">
+            <div className="section-tag">Demonstration Process</div>
+            <h2 className="section-title">What to Expect During Your Demonstration</h2>
+            <p className="section-subtitle">
+              A practical, 30-minute walkthrough focused on your institution's specific administrative workflow.
+            </p>
+          </div>
+
+          <div className="grid grid-3" style={{ marginTop: '32px' }}>
+            <div className="benefit-card">
+              <h3>1. Timetable Structure Mapping</h3>
+              <p>We review your school's period timings, split grids, zero periods, and laboratory blocks to demonstrate how your exact schedule is parsed.</p>
+            </div>
+
+            <div className="benefit-card">
+              <h3>2. Live Morning Absence Simulation</h3>
+              <p>We simulate typical morning leave scenarios (e.g. 5 concurrent teacher absences) and walk through conflict validation, candidate suggestions, and manual override.</p>
+            </div>
+
+            <div className="benefit-card">
+              <h3>3. Staffroom Slip &amp; Audit Output</h3>
+              <p>We showcase formatted physical noticeboard rosters and historical duty audit logs, addressing any questions from academic coordinators.</p>
+            </div>
           </div>
 
         </div>

@@ -19,17 +19,28 @@ export default function Footer() {
               Teacher substitutions, without the administrative chaos. A structured timetable and substitution management system for modern school administration.
             </p>
             <div className="footer-dev-tag">
-              A product by <strong>CORE Technologies</strong>.
+              Developed and supported by <strong>CORE Technologies</strong>.
             </div>
           </div>
 
           <div className="footer-nav-col">
-            <h4 className="footer-heading">Navigation</h4>
+            <h4 className="footer-heading">Product</h4>
             <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/product">Product</Link></li>
-              <li><Link to="/how-it-works">How It Works</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/">Overview</Link></li>
+              <li><Link to="/product">Features &amp; Modules</Link></li>
+              <li><Link to="/how-it-works">4-Step Workflow</Link></li>
+              <li><Link to="/how-it-works#architecture">Technical Architecture</Link></li>
+              <li><Link to="/#faq">Frequently Asked Questions</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-nav-col">
+            <h4 className="footer-heading">Institutional</h4>
+            <ul className="footer-links">
+              <li><Link to="/#case-study">Pawar Public School Pilot</Link></li>
+              <li><Link to="/product#stakeholders">Stakeholder Benefits</Link></li>
+              <li><Link to="/how-it-works#scenarios">Complex Scheduling Scenarios</Link></li>
+              <li><Link to="/contact#demo-form">Request a Demo</Link></li>
             </ul>
           </div>
 
@@ -43,7 +54,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="contact-label">Phone:</span>
+                <span className="contact-label">Telephone:</span>
                 <a href="tel:+919082777586" className="contact-link">
                   +91 9082777586
                 </a>
@@ -56,8 +67,12 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="contact-link"
                 >
-                  +91 9082777586 (Chat)
+                  +91 9082777586 (Administrative Desk)
                 </a>
+              </li>
+              <li>
+                <span className="contact-label">Hours:</span>
+                <span style={{ color: '#94a3b8', fontSize: '0.85rem' }}>Mon - Sat, 8:00 AM - 6:00 PM IST</span>
               </li>
             </ul>
           </div>
@@ -69,7 +84,7 @@ export default function Footer() {
             &copy; 2026 CORE Technologies. All rights reserved.
           </p>
           <p className="footer-meta">
-            Developed for educational institutions and school administration.
+            Institutional software engineered for school administration and academic continuity.
           </p>
         </div>
       </div>

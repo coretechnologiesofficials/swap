@@ -1,23 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
-import { DEMO_MAILTO_URL } from '../components/Navbar'
 
 export default function Product() {
   return (
     <div className="page-product">
       
-      {/* Product Hero */}
+      {/* 1. PRODUCT HERO & THREE PILLARS */}
       <section className="section product-hero">
         <div className="container">
           <div className="section-tag">System Capabilities</div>
-          <h1 className="section-title">Bring structure to substitution management.</h1>
+          <h1 className="section-title">Engineered for Everyday School Administration</h1>
           <p className="section-subtitle">
-            Select absent teachers. Review conflict-free suggestions. Print the morning roster. Built around the daily realities of school scheduling from Grades 1 to 12.
+            Six interconnected modules designed to eliminate timetable collisions, protect faculty workload, and guarantee continuous classroom supervision from Grades 1 to 12.
           </p>
 
           {/* The 3 Core Pillars (PLAN • BALANCE • RECORD) */}
-          <div className="pillars-grid" style={{ marginTop: 40, marginBottom: 20 }}>
+          <div className="pillars-grid" style={{ marginTop: '40px', marginBottom: '20px' }}>
             
             <div className="pillar-card">
               <span className="pillar-tag">Pillar 01</span>
@@ -28,15 +27,15 @@ export default function Product() {
               <ul className="pillar-list">
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Conflict-free automated suggestions
+                  Conflict-free automated candidate suggestions
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Full manual coordinator override
+                  Full manual coordinator override with 1 click
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Grades 1 to 12 coverage (Sections 1A–12E)
+                  Multi-grid coverage across Grades 1 to 12
                 </li>
               </ul>
             </div>
@@ -50,7 +49,7 @@ export default function Product() {
               <ul className="pillar-list">
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Instant live availability tracking
+                  Instant live free-period calculation
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -76,11 +75,11 @@ export default function Product() {
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Permanent historical substitution logs
+                  Permanent date-stamped substitution archive
                 </li>
                 <li>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Audit-ready records for school leadership
+                  Audit-ready logs for school leadership
                 </li>
               </ul>
             </div>
@@ -89,140 +88,335 @@ export default function Product() {
         </div>
       </section>
 
-      {/* Main Features Grid */}
-      <section className="section" style={{ paddingTop: 0 }}>
+      {/* 2. STRUCTURED PRODUCT MODULES (6 Core Modules) */}
+      <section className="section" style={{ paddingTop: '10px' }}>
         <div className="container">
-          <div className="product-features-grid">
-
-            {/* Feature 1 */}
-            <div className="product-card">
-              <span className="product-card-badge">Module 01</span>
-              <h2 className="product-card-title">Teacher Substitution Management</h2>
-              <p className="product-card-desc">
-                Select absent teachers in seconds. The engine identifies every scheduled lecture affected, checks faculty schedules across all grades, and suggests conflict-free substitute teachers while preserving the coordinator's ability to manually override any assignment.
-              </p>
-              <div className="product-benefit-box">
-                <span className="benefit-label">Administrative Benefit</span>
-                <span className="benefit-text">Reduces morning substitution planning time from hours to under two minutes.</span>
-              </div>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="product-card">
-              <span className="product-card-badge">Module 02</span>
-              <h2 className="product-card-title">Faculty Timetable Management</h2>
-              <p className="product-card-desc">
-                Maintains a centralized, queryable repository of faculty master timetables. Accommodates multi-grid setups (such as ICSE and ISC grids), split periods, zero periods, library duties, and faculty meetings without data fragmentation.
-              </p>
-              <div className="product-benefit-box">
-                <span className="benefit-label">Administrative Benefit</span>
-                <span className="benefit-text">Eliminates paper timetable binders and conflicting departmental spreadsheets.</span>
-              </div>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="product-card">
-              <span className="product-card-badge">Module 03</span>
-              <h2 className="product-card-title">Class Timetable Management</h2>
-              <p className="product-card-desc">
-                Stores section-wise class timetables from Grade 1 through Grade 12 (e.g. 1A–1E to 12A–12E). Tracks room numbers, subjects, and teacher pairings to ensure class coverage continuity.
-              </p>
-              <div className="product-benefit-box">
-                <span className="benefit-label">Administrative Benefit</span>
-                <span className="benefit-text">Guarantees students never wait in an unattended classroom when a teacher is away.</span>
-              </div>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="product-card">
-              <span className="product-card-badge">Module 04</span>
-              <h2 className="product-card-title">Faculty Availability &amp; Free Periods</h2>
-              <p className="product-card-desc">
-                Instantly calculates which teachers are free during any given period of any weekday. Provides a dual viewing mode: inspect teacher-wise schedules with free period counts, or look up period-by-period free faculty rosters.
-              </p>
-              <div className="product-benefit-box">
-                <span className="benefit-label">Administrative Benefit</span>
-                <span className="benefit-text">Instant, conflict-free visibility prevents double-booking substitute teachers.</span>
-              </div>
-            </div>
-
-            {/* Feature 5 */}
-            <div className="product-card">
-              <span className="product-card-badge">Module 05</span>
-              <h2 className="product-card-title">Substitution History &amp; Auditing</h2>
-              <p className="product-card-desc">
-                Chronologically archives every confirmed daily substitution run with exact dates, absent faculty names, and assigned substitute teachers. Readily searchable for term reviews and administrative compliance.
-              </p>
-              <div className="product-benefit-box">
-                <span className="benefit-label">Administrative Benefit</span>
-                <span className="benefit-text">Creates a permanent, transparent audit trail for workload disputes or management review.</span>
-              </div>
-            </div>
-
-            {/* Feature 6 */}
-            <div className="product-card">
-              <span className="product-card-badge">Module 06</span>
-              <h2 className="product-card-title">Workload Balancing &amp; Visibility</h2>
-              <p className="product-card-desc">
-                Distributes substitution periods equitably across the faculty. Prioritizes available teachers with fewer assigned cover periods and enforces an automatic ceiling (maximum 2 substitutions per teacher per day).
-              </p>
-              <div className="product-benefit-box">
-                <span className="benefit-label">Administrative Benefit</span>
-                <span className="benefit-text">Protects faculty morale by avoiding unfair burden on the same cooperative teachers.</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Practical Benefits Row for School Leaders */}
-      <section className="section admin-benefits-section">
-        <div className="container">
-          <div className="section-header text-left">
-            <div className="section-tag">Leadership Perspective</div>
-            <h2 className="section-title">Designed for Principals &amp; Vice Principals</h2>
+          <div className="section-header text-center" style={{ marginBottom: '32px' }}>
+            <div className="section-tag">Core Modules</div>
+            <h2 className="section-title">Comprehensive Administrative Toolkit</h2>
             <p className="section-subtitle">
-              How SWAP delivers operational clarity at every administrative level.
+              Each module is tailored to address specific operational bottlenecks in daily school scheduling.
             </p>
           </div>
 
-          <div className="grid grid-3">
-            <div className="benefit-card">
-              <h3>For Principals</h3>
-              <p>
-                Complete institutional confidence that every class period is reliably covered every morning without disruptions, double-bookings, or unaccounted absences.
-              </p>
+          <div className="product-features-grid">
+
+            {/* Module 01 */}
+            <div className="structured-module-card">
+              <div>
+                <div className="module-card-top">
+                  <span className="module-badge">Module 01</span>
+                  <div className="module-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+                  </div>
+                </div>
+                <h3 className="structured-module-title">Teacher Substitution Management</h3>
+                
+                <div className="module-desc-section">
+                  <span className="module-label">What It Does</span>
+                  <p className="module-body-text">
+                    Identifies all scheduled lectures affected by reported teacher absences and presents eligible substitute candidates for every vacant period.
+                  </p>
+                </div>
+
+                <div className="module-desc-section">
+                  <span className="module-label">How It Operates</span>
+                  <p className="module-body-text">
+                    Cross-references absent teachers with the day's master slots, isolates vacant classes, and checks all active teachers against scheduled duties, zero periods, and daily duty counts before suggesting conflict-free candidates.
+                  </p>
+                </div>
+              </div>
+
+              <div className="module-benefit-callout">
+                <span className="module-label">Administrative Benefit</span>
+                <span className="module-benefit-text">Reduces morning coordination from hours of paper cross-checking to under two minutes.</span>
+              </div>
             </div>
 
-            <div className="benefit-card">
-              <h3>For Vice Principals</h3>
-              <p>
-                Objective data on faculty workload distribution. Reliable audit trails for academic reviews, substitute allowance verifications, and teacher duty records.
-              </p>
+            {/* Module 02 */}
+            <div className="structured-module-card">
+              <div>
+                <div className="module-card-top">
+                  <span className="module-badge">Module 02</span>
+                  <div className="module-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  </div>
+                </div>
+                <h3 className="structured-module-title">Faculty Timetable Management</h3>
+                
+                <div className="module-desc-section">
+                  <span className="module-label">What It Does</span>
+                  <p className="module-body-text">
+                    Maintains a centralized, searchable repository of all teacher master timetables across departments and grades.
+                  </p>
+                </div>
+
+                <div className="module-desc-section">
+                  <span className="module-label">How It Operates</span>
+                  <p className="module-body-text">
+                    Parses term-start timetable documents into structured records accommodating multi-grid streams (ICSE, ISC, and secondary sections), zero periods, and faculty non-teaching duty blocks.
+                  </p>
+                </div>
+              </div>
+
+              <div className="module-benefit-callout">
+                <span className="module-label">Administrative Benefit</span>
+                <span className="module-benefit-text">Eliminates lost binders, conflicting spreadsheets, and fragmented departmental schedules.</span>
+              </div>
             </div>
 
-            <div className="benefit-card">
-              <h3>For Morning Coordinators</h3>
-              <p>
-                A peaceful morning routine. Instant identification of absent teachers' classes, automatic candidate suggestions, and one-click printable staffroom notices.
-              </p>
+            {/* Module 03 */}
+            <div className="structured-module-card">
+              <div>
+                <div className="module-card-top">
+                  <span className="module-badge">Module 03</span>
+                  <div className="module-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                  </div>
+                </div>
+                <h3 className="structured-module-title">Class Timetable Management</h3>
+                
+                <div className="module-desc-section">
+                  <span className="module-label">What It Does</span>
+                  <p className="module-body-text">
+                    Maps section-wise class timetables from Grade 1 through Grade 12 (including sections 1A to 12E).
+                  </p>
+                </div>
+
+                <div className="module-desc-section">
+                  <span className="module-label">How It Operates</span>
+                  <p className="module-body-text">
+                    Stores room numbers, subjects, and assigned teachers for every period of the weekly bell schedule, enabling instant lookup by class section whenever student schedules need review.
+                  </p>
+                </div>
+              </div>
+
+              <div className="module-benefit-callout">
+                <span className="module-label">Administrative Benefit</span>
+                <span className="module-benefit-text">Guarantees that no class section is left unattended due to untracked room or timetable shifts.</span>
+              </div>
             </div>
+
+            {/* Module 04 */}
+            <div className="structured-module-card">
+              <div>
+                <div className="module-card-top">
+                  <span className="module-badge">Module 04</span>
+                  <div className="module-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  </div>
+                </div>
+                <h3 className="structured-module-title">Faculty Availability &amp; Free Periods</h3>
+                
+                <div className="module-desc-section">
+                  <span className="module-label">What It Does</span>
+                  <p className="module-body-text">
+                    Instantly calculates and displays which teachers are free during any given period of any day of the week.
+                  </p>
+                </div>
+
+                <div className="module-desc-section">
+                  <span className="module-label">How It Operates</span>
+                  <p className="module-body-text">
+                    Offers dual viewing modes: an all-teacher matrix highlighting free periods and total free counts, and a period-by-period breakdown listing every candidate with zero scheduled teaching commitments.
+                  </p>
+                </div>
+              </div>
+
+              <div className="module-benefit-callout">
+                <span className="module-label">Administrative Benefit</span>
+                <span className="module-benefit-text">Gives coordinators instant visibility of unassigned faculty without manual ledger cross-referencing.</span>
+              </div>
+            </div>
+
+            {/* Module 05 */}
+            <div className="structured-module-card">
+              <div>
+                <div className="module-card-top">
+                  <span className="module-badge">Module 05</span>
+                  <div className="module-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  </div>
+                </div>
+                <h3 className="structured-module-title">Workload Balancing &amp; Guardrails</h3>
+                
+                <div className="module-desc-section">
+                  <span className="module-label">What It Does</span>
+                  <p className="module-body-text">
+                    Distributes substitution duties equitably across available faculty while enforcing an automatic daily ceiling.
+                  </p>
+                </div>
+
+                <div className="module-desc-section">
+                  <span className="module-label">How It Operates</span>
+                  <p className="module-body-text">
+                    Orders candidate suggestions by lowest cumulative substitution count today and filters out any teacher who has reached 2 daily duties, shielding cooperative faculty from repeated burden.
+                  </p>
+                </div>
+              </div>
+
+              <div className="module-benefit-callout">
+                <span className="module-label">Administrative Benefit</span>
+                <span className="module-benefit-text">Protects teacher morale, prevents burnout, and ensures transparent duty distribution.</span>
+              </div>
+            </div>
+
+            {/* Module 06 */}
+            <div className="structured-module-card">
+              <div>
+                <div className="module-card-top">
+                  <span className="module-badge">Module 06</span>
+                  <div className="module-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline><path d="M18 18H6"></path></svg>
+                  </div>
+                </div>
+                <h3 className="structured-module-title">Substitution Records &amp; Auditing</h3>
+                
+                <div className="module-desc-section">
+                  <span className="module-label">What It Does</span>
+                  <p className="module-body-text">
+                    Chronologically archives every confirmed daily substitution run for institutional record-keeping and audit compliance.
+                  </p>
+                </div>
+
+                <div className="module-desc-section">
+                  <span className="module-label">How It Operates</span>
+                  <p className="module-body-text">
+                    Locks confirmed substitution rosters with exact dates, absent teachers, assigned substitutes, and class periods in a permanent local database searchable by date range.
+                  </p>
+                </div>
+              </div>
+
+              <div className="module-benefit-callout">
+                <span className="module-label">Administrative Benefit</span>
+                <span className="module-benefit-text">Provides verifiable duty records for academic reviews, substitute allowances, and parent inquiries.</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* 3. STAKEHOLDER-BASED BENEFITS (4 Categories) */}
+      <section className="section section-alt" id="stakeholders">
+        <div className="container">
+          <div className="section-header text-center">
+            <div className="section-tag">Institutional Impact</div>
+            <h2 className="section-title">Designed for Every School Stakeholder</h2>
+            <p className="section-subtitle">
+              How S.W.A.P. provides operational control, transparent records, and fairness across leadership and faculty.
+            </p>
+          </div>
+
+          <div className="stakeholders-grid">
+            
+            {/* Stakeholder 1: Principals */}
+            <div className="stakeholder-card">
+              <span className="stakeholder-role-tag">Leadership</span>
+              <h3 className="stakeholder-title">For Principals</h3>
+              <ul className="stakeholder-focus-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Institutional Continuity:</strong> Confidence that every period is reliably covered every morning.</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Administrative Oversight:</strong> Complete operational visibility into daily faculty absences and coverage.</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Audit-Ready Records:</strong> Permanent date-stamped logs for board reports and compliance checks.</span>
+                </li>
+              </ul>
+              <div className="stakeholder-mechanism-note">
+                <strong>Mechanism:</strong> Immutable local database logs prevent unrecorded substitutions or dispute ambiguities.
+              </div>
+            </div>
+
+            {/* Stakeholder 2: Vice Principals */}
+            <div className="stakeholder-card">
+              <span className="stakeholder-role-tag">Academic Administration</span>
+              <h3 className="stakeholder-title">For Vice Principals</h3>
+              <ul className="stakeholder-focus-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Workload Monitoring:</strong> Objective data on cumulative substitution distribution across departments.</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Multi-Grid Coordination:</strong> Synchronizes ICSE, ISC, and primary schedules without cross-stream friction.</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Conflict Prevention:</strong> Strict algorithmic validation catches overlapping non-teaching assignments.</span>
+                </li>
+              </ul>
+              <div className="stakeholder-mechanism-note">
+                <strong>Mechanism:</strong> Unified query engine evaluates teacher commitments across all stream timetables simultaneously.
+              </div>
+            </div>
+
+            {/* Stakeholder 3: Timetable Coordinators */}
+            <div className="stakeholder-card">
+              <span className="stakeholder-role-tag">Daily Operations</span>
+              <h3 className="stakeholder-title">For Coordinators</h3>
+              <ul className="stakeholder-focus-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Instant Availability:</strong> Zero manual ledger searching during the stressful 7:30 AM morning rush.</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>1-Click Override:</strong> Discretion to confirm candidate suggestion or reassign with a single click.</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Formatted Notices:</strong> One-click printable noticeboard slips ready before morning assembly.</span>
+                </li>
+              </ul>
+              <div className="stakeholder-mechanism-note">
+                <strong>Mechanism:</strong> Automated candidate sorting presents the best free candidate while leaving ultimate authority with the coordinator.
+              </div>
+            </div>
+
+            {/* Stakeholder 4: Teaching Faculty */}
+            <div className="stakeholder-card">
+              <span className="stakeholder-role-tag">Teaching Staff</span>
+              <h3 className="stakeholder-title">For Teachers</h3>
+              <ul className="stakeholder-focus-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Burnout Protection:</strong> Strict ceiling of maximum 2 substitution duties per day.</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Transparent Distribution:</strong> Eliminates perception of favoritism or repeated assignment burden.</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Advance Notice:</strong> Substitution duties clearly communicated via noticeboard slips before the bell.</span>
+                </li>
+              </ul>
+              <div className="stakeholder-mechanism-note">
+                <strong>Mechanism:</strong> Automated greedy load balancing prioritizes faculty who have served zero duties today before assigning a second duty.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 4. FINAL CTA SECTION */}
       <section className="home-cta-section">
         <div className="container">
           <div className="cta-box">
-            <h2 className="cta-heading">Ready to see SWAP with your school's data?</h2>
+            <h2 className="cta-heading">See S.W.A.P. configured with your school's timetable.</h2>
             <p className="cta-subtext">
-              We configure a demonstration workspace using your actual period structure and faculty roster.
+              We will configure an institutional test workspace using your school's actual bell timings, room numbers, and faculty lists.
             </p>
-            <Button href={DEMO_MAILTO_URL} variant="primary" size="lg">
-              Request a Demonstration
-            </Button>
+            <Link to="/contact#demo-form" className="btn btn-primary btn-lg">
+              Request an Institutional Demo
+            </Link>
           </div>
         </div>
       </section>

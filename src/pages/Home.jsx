@@ -13,26 +13,11 @@ export default function Home() {
       <section className="section home-hero">
         <div className="container">
           
-          {/* Pawar Public School Hero Spotlight (Attention-Grabbing Live Pilot) */}
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <div className="hero-pilot-spotlight">
-              <span className="hero-spotlight-pulse">
-                <span className="pulse-dot"></span>
-                LIVE PILOT
-              </span>
-              <div className="hero-spotlight-logo-wrap">
-                <img
-                  src="assets/PPS_Logo_dombivali.png"
-                  alt="Pawar Public School, Dombivli Logo"
-                  className="hero-spotlight-logo"
-                />
-              </div>
-              <div className="hero-spotlight-text">
-                <span>Pawar Public School, Dombivli</span>
-                <span className="hero-spotlight-divider">•</span>
-                <span className="hero-spotlight-sub">100+ Teaching Faculty</span>
-              </div>
-            </div>
+          <div className="hero-badge-wrap">
+            <span className="hero-badge">
+              <span className="badge-dot"></span>
+              SMART WORKFLOW ALLOCATION &amp; PLACEMENT
+            </span>
           </div>
 
           <h1 className="hero-headline">
@@ -78,6 +63,59 @@ export default function Home() {
               </svg>
               Printable Morning Rosters
             </span>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------------------------
+          OUR CLIENTS SECTION (Prominent Pawar Public School Showcase)
+          --------------------------------------------------------------------- */}
+      <section className="section clients-section">
+        <div className="container">
+          <div className="section-header text-center" style={{ marginBottom: 32 }}>
+            <div className="section-tag">Institutional Trust</div>
+            <h2 className="section-title">Our Clients</h2>
+            <p className="section-subtitle">
+              Deployed and evaluated in live everyday school operations.
+            </p>
+          </div>
+
+          <div className="client-spotlight-card">
+            <div className="client-logo-column">
+              <img
+                src="assets/PPS_Logo_dombivali.png"
+                alt="Pawar Public School, Dombivli Logo"
+                className="client-main-logo"
+              />
+              <span className="client-location-text">Dombivli, Maharashtra</span>
+            </div>
+            
+            <div className="client-info-column">
+              <div className="client-status-badge">
+                <span className="status-dot"></span>
+                ACTIVE INSTITUTIONAL DEPLOYMENT
+              </div>
+              <h3 className="client-school-name">Pawar Public School</h3>
+              <p className="client-narrative">
+                Pawar Public School, Dombivli actively utilizes SWAP to manage daily teacher substitutions, prevent double-bookings, and monitor faculty availability across more than 100 teaching staff from Grade 1 through Grade 12.
+              </p>
+
+              <div className="client-metrics-row">
+                <div className="client-metric-pill">
+                  <strong>100+</strong> Teaching Faculty
+                </div>
+                <div className="client-metric-pill">
+                  <strong>Grades 1 to 12</strong> Multi-Grid Coverage
+                </div>
+                <div className="client-metric-pill">
+                  <strong>Max 2 Duties</strong> Automated Daily Limit
+                </div>
+                <div className="client-metric-pill">
+                  <strong>&lt; 2 Mins</strong> Morning Resolution
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -199,7 +237,7 @@ export default function Home() {
             <span className="section-tag" style={{ marginBottom: 12 }}>Local • Independent • Practical</span>
             <h2 className="cta-heading" style={{ marginBottom: 12 }}>Ready for tomorrow morning's substitution routine.</h2>
             <p className="cta-subtext" style={{ maxWidth: 620, margin: '0 auto 24px', lineHeight: 1.6 }}>
-              SWAP runs directly on your campus desktop and intranet. No continuous internet connection needed for routine planning — your school's student timetables and faculty records never leave your campus.
+              SWAP runs directly on your campus desktop and intranet. No continuous internet connection needed for routine planning - your school's student timetables and faculty records never leave your campus.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: 16, flexWrap: 'wrap', marginBottom: 28 }}>

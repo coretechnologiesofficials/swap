@@ -17,70 +17,111 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      {/* Primary Visual Process Flow */}
+      {/* Flowchart Section */}
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           
-          <div className="workflow-steps-vertical">
+          <div className="flowchart-container">
             
-            {/* Step 1 */}
-            <div className="step-row-card">
-              <div className="step-indicator">01</div>
-              <div className="step-main-content">
-                <h2 className="step-heading">STEP 01 — Upload Timetables</h2>
-                <p className="step-desc">
-                  Import your faculty master schedule and student class-wise timetable files into SWAP. The system parses all periods, class sections, teacher pairings, and room assignments, establishing the school's private timetable baseline.
-                </p>
+            {/* Node 01: Setup & Import */}
+            <div className="flowchart-node">
+              <div className="flowchart-node-header">
+                <span className="flowchart-stage-tag">STAGE 01: DATA INGESTION</span>
+                <span className="flowchart-timing-tag">Term-Start Setup (Once per term)</span>
               </div>
-              <div className="step-badge-col">
-                <span className="step-frequency">Term Setup</span>
-                <span className="step-timing">Uploaded once at term start</span>
+              <h3 className="flowchart-node-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: 'var(--brand-blue)' }}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                Upload &amp; Ingest Master Timetables
+              </h3>
+              <p className="flowchart-node-desc">
+                Import faculty master schedules and section grids (Grades 1 through 12, sections 1A to 12E). SWAP parses and maps subject lectures, zero periods, library hours, laboratory slots, and teacher pairings into the school's private local database.
+              </p>
+            </div>
+
+            {/* Flow Connector 1 -> 2 */}
+            <div className="flowchart-connector">
+              <div className="flowchart-line"></div>
+              <svg className="flowchart-arrow-head" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              <span className="flowchart-connector-label">School Baseline Stored Locally</span>
+            </div>
+
+            {/* Node 02: Morning Absence Trigger */}
+            <div className="flowchart-node">
+              <div className="flowchart-node-header">
+                <span className="flowchart-stage-tag" style={{ color: '#b45309', background: '#fef3c7', borderColor: '#fde68a' }}>STAGE 02: MORNING TRIGGER</span>
+                <span className="flowchart-timing-tag">Daily Morning (~30 Seconds)</span>
+              </div>
+              <h3 className="flowchart-node-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: '#b45309' }}><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="18" y1="8" x2="23" y2="13"></line><line x1="23" y1="8" x2="18" y2="13"></line></svg>
+                Log Reported Teacher Absences
+              </h3>
+              <p className="flowchart-node-desc">
+                As morning leave calls or messages arrive, the timetable coordinator selects absent teachers from a searchable faculty dropdown. The system instantly queries the database and isolates every vacant lecture and class section for the day.
+              </p>
+            </div>
+
+            {/* Flow Connector 2 -> 3 */}
+            <div className="flowchart-connector">
+              <div className="flowchart-line"></div>
+              <svg className="flowchart-arrow-head" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              <span className="flowchart-connector-label">Vacant Periods Identified</span>
+            </div>
+
+            {/* Node 03: Decision & Conflict Engine */}
+            <div className="flowchart-node" style={{ border: '2px solid #93c5fd', background: 'linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)' }}>
+              <div className="flowchart-node-header">
+                <span className="flowchart-stage-tag" style={{ color: '#1d4ed8', background: '#dbeafe', borderColor: '#bfdbfe' }}>STAGE 03: CONFLICT CHECK ENGINE</span>
+                <span className="flowchart-timing-tag">Calculated in &lt; 50ms</span>
+              </div>
+              <h3 className="flowchart-node-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: '#1d4ed8' }}><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                Deterministic Substitution &amp; Workload Matching
+              </h3>
+              <p className="flowchart-node-desc">
+                The allocation engine scans master schedules to pair vacant slots with genuinely free teachers while enforcing institutional fairness policies.
+              </p>
+
+              {/* Flowchart Inner Decision Rules Grid */}
+              <div className="flowchart-rules-box">
+                <div className="flowchart-rule-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Real-Time Availability:</strong> Verifies teacher is 100% free with zero conflicting duties during that bell.</span>
+                </div>
+                <div className="flowchart-rule-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Workload Guardrail:</strong> Automatically filters out any faculty member who has reached the max 2 duties/day limit.</span>
+                </div>
+                <div className="flowchart-rule-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Special Slot Protection:</strong> Respects laboratory sessions, zero periods, and departmental conference blocks.</span>
+                </div>
+                <div className="flowchart-rule-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><strong>Manual Override:</strong> Coordinator retains full authority to confirm suggested candidate or swap with one click.</span>
+                </div>
               </div>
             </div>
 
-            {/* Step 2 */}
-            <div className="step-row-card">
-              <div className="step-indicator">02</div>
-              <div className="step-main-content">
-                <h2 className="step-heading">STEP 02 — Mark Absences</h2>
-                <p className="step-desc">
-                  When leave notifications arrive in the morning, the administrative coordinator selects the absent teachers from a searchable faculty dropdown. The system instantly isolates every lecture and classroom affected for the day.
-                </p>
-              </div>
-              <div className="step-badge-col">
-                <span className="step-frequency">Daily Morning</span>
-                <span className="step-timing">Takes ~30 seconds</span>
-              </div>
+            {/* Flow Connector 3 -> 4 */}
+            <div className="flowchart-connector">
+              <div className="flowchart-line"></div>
+              <svg className="flowchart-arrow-head" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              <span className="flowchart-connector-label">Schedule Confirmed by Coordinator</span>
             </div>
 
-            {/* Step 3 */}
-            <div className="step-row-card">
-              <div className="step-indicator">03</div>
-              <div className="step-main-content">
-                <h2 className="step-heading">STEP 03 — Generate Substitutions</h2>
-                <p className="step-desc">
-                  Click Generate to run the deterministic conflict check. SWAP evaluates every teacher free at each period, balances the workload (max 2 cover periods per teacher per day), and presents suggested substitutes with full manual override control.
-                </p>
+            {/* Node 04: Noticeboard & Live Logging */}
+            <div className="flowchart-node">
+              <div className="flowchart-node-header">
+                <span className="flowchart-stage-tag" style={{ color: '#047857', background: '#d1fae5', borderColor: '#a7f3d0' }}>STAGE 04: NOTICEBOARD &amp; AUDIT</span>
+                <span className="flowchart-timing-tag">Ready Before Morning Assembly</span>
               </div>
-              <div className="step-badge-col">
-                <span className="step-frequency">Deterministic Check</span>
-                <span className="step-timing">Calculated in milliseconds</span>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="step-row-card">
-              <div className="step-indicator">04</div>
-              <div className="step-main-content">
-                <h2 className="step-heading">STEP 04 — Monitor Availability</h2>
-                <p className="step-desc">
-                  Confirm the schedule to save it permanently into the historical log. Instantly export a clean printable daily substitution sheet for the staffroom noticeboard, while real-time availability views update with assigned duties marked in red.
-                </p>
-              </div>
-              <div className="step-badge-col">
-                <span className="step-frequency">Ready Before Assembly</span>
-                <span className="step-timing">Printable noticeboard sheets</span>
-              </div>
+              <h3 className="flowchart-node-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: '#047857' }}><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                Print Staffroom Slips &amp; Archive Records
+              </h3>
+              <p className="flowchart-node-desc">
+                Instantly exports clean, formatted physical substitution slips for the staffroom noticeboard. Teacher availability matrices immediately update with substitution duty marked in red, and the day's record is locked in the historical archive.
+              </p>
             </div>
 
           </div>

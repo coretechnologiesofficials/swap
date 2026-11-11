@@ -21,7 +21,7 @@ export default function Home() {
           </div>
 
           <h1 className="hero-headline">
-            Teacher substitutions, without the administrative chaos.
+            Teacher substitutions, <span className="hero-gradient-text">without the administrative chaos.</span>
           </h1>
 
           <p className="hero-description">
@@ -63,6 +63,90 @@ export default function Home() {
               </svg>
               Printable Morning Rosters
             </span>
+          </div>
+
+          {/* Hero Interactive Substitution Preview Card (Modern SaaS UI Centerpiece) */}
+          <div className="hero-engine-preview">
+            <div className="engine-preview-window">
+              
+              <div className="engine-window-header">
+                <div className="window-controls">
+                  <span className="control-dot dot-red"></span>
+                  <span className="control-dot dot-yellow"></span>
+                  <span className="control-dot dot-green"></span>
+                </div>
+                <div className="window-title">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: 'var(--brand-blue)' }}><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  SWAP v1.0 - Morning Allocation Core
+                </div>
+                <div className="window-status-pill">
+                  <span className="pulse-dot"></span>
+                  Real-Time Conflict Checking Active
+                </div>
+              </div>
+
+              <div className="engine-preview-body">
+                <div className="engine-slot-bar">
+                  <div className="slot-badge">PERIOD 04 &bull; 10:45 AM - 11:30 AM</div>
+                  <div className="slot-class-info">Grade 9A &bull; Mathematics &bull; Room 204</div>
+                </div>
+
+                <div className="engine-matching-grid">
+                  
+                  {/* Absence Alert Column */}
+                  <div className="engine-column absence-col">
+                    <div className="col-status-tag tag-alert">LEAVE REPORTED</div>
+                    <div className="teacher-profile">
+                      <div className="teacher-avatar avatar-absent">AS</div>
+                      <div className="teacher-meta">
+                        <div className="teacher-name">Mrs. A. Sharma</div>
+                        <div className="teacher-dept">Mathematics Faculty</div>
+                      </div>
+                    </div>
+                    <div className="slot-notice">Class 9A vacant &bull; Substitution required</div>
+                  </div>
+
+                  {/* Match Engine Core Indicator */}
+                  <div className="engine-match-indicator">
+                    <div className="match-icon-wrap">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+                    </div>
+                    <span className="match-scan-text">0 Collisions</span>
+                  </div>
+
+                  {/* Suggested Candidate Column */}
+                  <div className="engine-column match-col">
+                    <div className="col-status-tag tag-match">100% FREE CANDIDATE</div>
+                    <div className="teacher-profile">
+                      <div className="teacher-avatar avatar-available">RV</div>
+                      <div className="teacher-meta">
+                        <div className="teacher-name">Mr. R. Verma</div>
+                        <div className="teacher-dept">Free Period 4 &bull; Senior Faculty</div>
+                      </div>
+                    </div>
+                    <div className="workload-guardrail-tag">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Duty 1 of 2 (Workload Policy Compliant)
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Engine Action Strip */}
+                <div className="engine-action-strip">
+                  <div className="engine-verification-text">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: '#10b981' }}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>Deterministic validation complete across 100+ faculty timetables</span>
+                  </div>
+                  <div className="engine-buttons">
+                    <span className="btn-preview-action btn-confirm">Confirm Allocation</span>
+                    <span className="btn-preview-action btn-print">Print Notice Slip</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
           </div>
 
         </div>

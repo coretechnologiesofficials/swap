@@ -1,5 +1,5 @@
 /**
- * S.W.A.P Official Marketing Website — Multi-Page Script
+ * S.W.A.P Official Marketing Website - Multi-Page Script
  * Handles mobile drawer toggle, active state, and smooth header transitions.
  */
 

@@ -42,9 +42,14 @@ export default function Home() {
       <section className="section home-hero">
         <div className="container">
           
-          <span className="hero-category-label">
-            SCHOOL ADMINISTRATION SOFTWARE
-          </span>
+          {/* Hero Brand Badge: Logo + Name + One-Liner (Hover UX) */}
+          <div className="hero-brand-badge">
+            <img src="assets/logo.png" alt="S.W.A.P Logo" className="hero-brand-logo" width="34" height="34" />
+            <div className="hero-brand-text">
+              <span className="hero-brand-title">S.W.A.P</span>
+              <span className="hero-brand-tagline">Teacher substitutions, without the administrative chaos.</span>
+            </div>
+          </div>
 
           <h1 className="hero-headline">
             Teacher substitutions.<br />Simplified.

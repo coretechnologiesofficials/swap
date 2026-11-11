@@ -959,13 +959,14 @@ button {
 }
 
 /* ==========================================================================
-   FOOTER (Clean & Compact)
+   FOOTER (Navy Blue Institutional Theme)
    ========================================================================== */
 
 .site-footer {
-  background: #ffffff;
-  border-top: 1px solid var(--border-light);
-  padding: 48px 0 32px 0;
+  background: #080d1a;
+  border-top: 1px solid #1e293b;
+  padding: 56px 0 36px 0;
+  color: #94a3b8;
 }
 
 .footer-top {
@@ -973,32 +974,37 @@ button {
   align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   flex-wrap: wrap;
 }
 
 .footer-brand-col {
-  max-width: 320px;
+  max-width: 340px;
 }
 
 .footer-brand-title {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 4px;
+  color: #ffffff;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 
 .footer-brand-desc {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 8px;
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin-bottom: 10px;
 }
 
 .footer-company-tag {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+.footer-company-tag strong {
+  color: #cbd5e1;
 }
 
 .footer-links-group {
@@ -1011,34 +1017,37 @@ button {
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-primary);
-  margin-bottom: 12px;
+  letter-spacing: 0.06em;
+  color: #f1f5f9;
+  margin-bottom: 14px;
 }
 
 .footer-nav-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .footer-nav-list a {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
+  font-size: 0.9rem;
+  color: #94a3b8;
+  transition: color 0.15s ease, transform 0.15s ease;
+  display: inline-block;
 }
 
 .footer-nav-list a:hover {
-  color: var(--brand-blue);
+  color: #60a5fa;
+  transform: translateX(2px);
 }
 
 .footer-bottom {
-  padding-top: 24px;
+  padding-top: 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: #64748b;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -1176,5 +1185,184 @@ button {
 
   .brand-subtitle {
     display: none;
+  }
+}
+
+
+/* ==========================================================================
+   HERO BRAND BADGE & TACTILE HOVER UX
+   ========================================================================== */
+
+.hero-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 8px 18px 8px 10px;
+  border-radius: 9999px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.05);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.hero-brand-badge:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-blue-border);
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.15);
+  background: #fafcff;
+}
+
+.hero-brand-logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.hero-brand-badge:hover .hero-brand-logo {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.hero-brand-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.hero-brand-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  padding-right: 10px;
+  border-right: 1px solid var(--border-light);
+}
+
+.hero-brand-tagline {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Capability Indicators with Interactive Hover UX */
+.hero-indicator-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.hero-indicator-item:hover {
+  transform: translateY(-2px);
+  background: var(--brand-blue-subtle);
+  border-color: var(--brand-blue-border);
+  color: var(--brand-blue);
+  box-shadow: 0 6px 14px -2px rgba(37, 99, 235, 0.12);
+}
+
+.hero-indicator-item svg {
+  color: var(--brand-blue);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.hero-indicator-item:hover svg {
+  transform: scale(1.15);
+}
+
+/* Button Lift & Glow Hover UX */
+.btn-primary:hover {
+  background-color: var(--brand-blue-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.35);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-secondary);
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -4px rgba(0, 0, 0, 0.08);
+}
+
+/* Cards Hovering Lift UX */
+.case-study-box {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.case-study-box:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.06);
+}
+
+.comparison-col {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comparison-col:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 20px -4px rgba(15, 23, 42, 0.05);
+}
+
+.feature-clean-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-clean-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 20px -4px rgba(15, 23, 42, 0.05);
+}
+
+.stakeholder-box {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stakeholder-box:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 20px -4px rgba(15, 23, 42, 0.05);
+}
+
+.contact-option-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-option-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 20px -4px rgba(15, 23, 42, 0.06);
+}
+
+@media (max-width: 640px) {
+  .hero-brand-badge {
+    border-radius: 12px;
+    padding: 10px 14px;
+    width: 100%;
+    max-width: 360px;
+    justify-content: center;
+  }
+  .hero-brand-text {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .hero-brand-title {
+    border-right: none;
+    padding-right: 0;
   }
 }

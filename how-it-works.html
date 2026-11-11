@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How It Works - S.W.A.P. | School Substitution Workflow</title>
-  <meta name="description" content="Discover how S.W.A.P. operates: initial timetable ingestion vs daily 2-minute morning substitution routine, handling real-world scheduling complexity.">
+  <meta name="description" content="A simple 4-step workflow turning morning substitution coordination into a calm, reliable two-minute routine.">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="canonical" href="https://coretechnologiesofficials.github.io/swap/how-it-works.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://coretechnologiesofficials.github.io/swap/how-it-works.html">
-  <meta property="og:title" content="How S.W.A.P. Operates - 4-Step Routine &amp; Engine Architecture">
-  <meta property="og:description" content="A sequential 4-step workflow turning stressful morning coordination into a calm, conflict-free administrative routine.">
+  <meta property="og:title" content="How S.W.A.P. Operates - 4-Step Routine">
+  <meta property="og:description" content="A simple 4-stage routine designed for school administrators.">
   <meta property="og:image" content="assets/logo.png">
 
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -45,9 +45,8 @@
       </nav>
 
       <div class="header-actions">
-        <a href="contact.html#demo-form" class="btn btn-primary btn-sm nav-cta">Request a Demo</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Request a Demo</a>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
         </button>
@@ -62,7 +61,7 @@
         <a href="how-it-works.html" class="mobile-link active">How It Works</a>
         <a href="contact.html" class="mobile-link">Contact</a>
         <div class="mobile-cta-wrapper">
-          <a href="contact.html#demo-form" class="btn btn-primary btn-block">Request a Demo</a>
+          <a href="contact.html" class="btn btn-primary btn-block">Request a Demo</a>
         </div>
       </nav>
     </div>
@@ -73,150 +72,104 @@
        ========================================================================= -->
   <main>
     
-    <!-- 1. Hero Section -->
-    <section class="section how-it-works-hero">
-      <div class="container">
-        <div class="section-tag">Four-Step Process</div>
-        <h1 class="section-title">How S.W.A.P. Operates in Daily Administration</h1>
+    <!-- 1. HEADER SECTION -->
+    <section class="section" style="padding-bottom: 20px;">
+      <div class="container text-center">
+        <span class="section-tag">Daily Routine</span>
+        <h1 class="section-title">The Four-Step Workflow</h1>
         <p class="section-subtitle">
-          A predictable, sequential workflow designed to turn stressful morning substitution coordination into a calm, reliable two-minute task.
+          Designed to turn stressful morning substitution coordination into a calm, reliable two-minute task.
         </p>
       </div>
     </section>
 
-    <!-- 2. Initial Setup vs Daily Routine Distinction -->
-    <section class="section" style="padding-top: 0; padding-bottom: 40px;">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-          
-          <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 10px; padding: 24px;">
-            <div style="display: inline-block; font-size: 0.75rem; font-weight: 700; color: #1e40af; background: #dbeafe; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px;">
-              ONCE PER ACADEMIC TERM
-            </div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;">Initial Setup &amp; Configuration</h3>
-            <p style="font-size: 0.88rem; color: #475569; line-height: 1.5; margin: 0;">
-              Import master class timetables (Grades 1 to 12), faculty lists, room numbers, and bell schedules into the private local database. Takes approximately 20 minutes with our support team, establishing the baseline for the entire term.
+    <!-- 2. ROUTINE DISTINCTION (Term Setup vs Daily Operation) -->
+    <section class="section" style="padding-top: 0; padding-bottom: 20px;">
+      <div class="container-narrow">
+        <div class="routine-contrast-row">
+          <div class="routine-contrast-box">
+            <div class="routine-tag">Term-Start Setup</div>
+            <h3 class="routine-title">Initial Configuration</h3>
+            <p class="routine-text">
+              Master class timetables, teacher schedules, room allocations, and bell timings are ingested once per academic term.
             </p>
           </div>
 
-          <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 24px;">
-            <div style="display: inline-block; font-size: 0.75rem; font-weight: 700; color: #166534; background: #dcfce7; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px;">
-              DAILY MORNING ROUTINE
-            </div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: #14532d; margin-bottom: 8px;">Daily Absence Allocation (&lt; 2 Mins)</h3>
-            <p style="font-size: 0.88rem; color: #166534; line-height: 1.5; margin: 0;">
-              Every morning as leave calls arrive, the coordinator selects absent teachers. The engine evaluates availability in milliseconds, presents conflict-free candidate suggestions, and exports printable staffroom slips before assembly.
+          <div class="routine-contrast-box daily">
+            <div class="routine-tag">Daily Operation</div>
+            <h3 class="routine-title">Morning Routine (&lt; 2 Mins)</h3>
+            <p class="routine-text">
+              Log absences as notifications arrive, verify candidate suggestions, apply manual overrides if desired, and print staffroom notices.
             </p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- 3. Four-Stage Flowchart Section -->
+    <!-- 3. THE 4 STAGES (Minimal Vertical Timeline with Consistent Blue Marker) -->
     <section class="section" style="padding-top: 10px;">
       <div class="container">
         
-        <div class="flowchart-container">
+        <div class="workflow-timeline">
           
-          <!-- Node 01: Setup & Import -->
-          <div class="flowchart-node">
-            <div class="flowchart-node-header">
-              <span class="flowchart-stage-tag">STAGE 01: DATA INGESTION</span>
-              <span class="flowchart-timing-tag">Term-Start Setup (Once per term)</span>
-            </div>
-            <h3 class="flowchart-node-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--brand-blue);"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-              Master Timetable Ingestion &amp; Mapping
-            </h3>
-            <p class="flowchart-node-desc">
-              Import faculty master schedules and section grids (Grades 1 through 12, sections 1A to 12E). S.W.A.P. parses and maps subject lectures, zero periods, library hours, laboratory slots, and teacher pairings into the school's private local database.
-            </p>
-          </div>
-
-          <!-- Flow Connector 1 -> 2 -->
-          <div class="flowchart-connector">
-            <div class="flowchart-line"></div>
-            <svg class="flowchart-arrow-head" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            <span class="flowchart-connector-label">School Baseline Stored Locally</span>
-          </div>
-
-          <!-- Node 02: Morning Absence Trigger -->
-          <div class="flowchart-node">
-            <div class="flowchart-node-header">
-              <span class="flowchart-stage-tag" style="color: #b45309; background: #fef3c7; border-color: #fde68a;">STAGE 02: MORNING TRIGGER</span>
-              <span class="flowchart-timing-tag">Daily Morning (~30 Seconds)</span>
-            </div>
-            <h3 class="flowchart-node-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #b45309;"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="18" y1="8" x2="23" y2="13"></line><line x1="23" y1="8" x2="18" y2="13"></line></svg>
-              Log Reported Faculty Absences
-            </h3>
-            <p class="flowchart-node-desc">
-              As morning leave calls or messages arrive, the timetable coordinator selects absent teachers from a searchable faculty dropdown. The system instantly queries the database and isolates every vacant lecture and class section for the day.
-            </p>
-          </div>
-
-          <!-- Flow Connector 2 -> 3 -->
-          <div class="flowchart-connector">
-            <div class="flowchart-line"></div>
-            <svg class="flowchart-arrow-head" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            <span class="flowchart-connector-label">Vacant Periods Identified</span>
-          </div>
-
-          <!-- Node 03: Decision & Conflict Engine -->
-          <div class="flowchart-node" style="border: 2px solid #93c5fd; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);">
-            <div class="flowchart-node-header">
-              <span class="flowchart-stage-tag" style="color: #1d4ed8; background: #dbeafe; border-color: #bfdbfe;">STAGE 03: CONFLICT CHECK ENGINE</span>
-              <span class="flowchart-timing-tag">Evaluated in &lt; 50ms</span>
-            </div>
-            <h3 class="flowchart-node-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #1d4ed8;"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-              Deterministic Substitution &amp; Workload Matching
-            </h3>
-            <p class="flowchart-node-desc">
-              The allocation engine scans master schedules to pair vacant slots with genuinely free teachers while enforcing institutional fairness policies.
-            </p>
-
-            <div class="flowchart-rules-box">
-              <div class="flowchart-rule-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Real-Time Availability:</strong> Verifies teacher is 100% free with zero conflicting duties during that bell.</span>
+          <!-- Stage 01 -->
+          <div class="timeline-stage-item">
+            <div class="timeline-marker">01</div>
+            <div class="timeline-content">
+              <div class="stage-label-row">
+                <span class="stage-number">STAGE 01</span>
+                <span class="stage-timing">Once per academic term</span>
               </div>
-              <div class="flowchart-rule-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Workload Guardrail:</strong> Automatically filters out any faculty member who has reached the max 2 duties/day limit.</span>
-              </div>
-              <div class="flowchart-rule-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Special Slot Protection:</strong> Respects laboratory sessions, zero periods, and departmental conference blocks.</span>
-              </div>
-              <div class="flowchart-rule-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Manual Override:</strong> Coordinator retains full authority to confirm suggested candidate or swap with one click.</span>
-              </div>
+              <h3 class="stage-title">Data Setup</h3>
+              <p class="stage-description">
+                Configure institutional timetables and faculty information. Class schedules across Grades 1 through 12 and teacher assignments are stored in the local on-premise database.
+              </p>
             </div>
           </div>
 
-          <!-- Flow Connector 3 -> 4 -->
-          <div class="flowchart-connector">
-            <div class="flowchart-line"></div>
-            <svg class="flowchart-arrow-head" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            <span class="flowchart-connector-label">Schedule Confirmed by Coordinator</span>
+          <!-- Stage 02 -->
+          <div class="timeline-stage-item">
+            <div class="timeline-marker">02</div>
+            <div class="timeline-content">
+              <div class="stage-label-row">
+                <span class="stage-number">STAGE 02</span>
+                <span class="stage-timing">Daily morning (~30 seconds)</span>
+              </div>
+              <h3 class="stage-title">Absence Reporting</h3>
+              <p class="stage-description">
+                Record faculty absences for the day from a searchable faculty list. The system isolates affected lectures and pinpoints every vacant class period.
+              </p>
+            </div>
           </div>
 
-          <!-- Node 04: Noticeboard & Live Logging -->
-          <div class="flowchart-node">
-            <div class="flowchart-node-header">
-              <span class="flowchart-stage-tag" style="color: #047857; background: #d1fae5; border-color: #a7f3d0;">STAGE 04: NOTICEBOARD &amp; AUDIT</span>
-              <span class="flowchart-timing-tag">Ready Before Morning Assembly</span>
+          <!-- Stage 03 -->
+          <div class="timeline-stage-item">
+            <div class="timeline-marker">03</div>
+            <div class="timeline-content">
+              <div class="stage-label-row">
+                <span class="stage-number">STAGE 03</span>
+                <span class="stage-timing">Calculated in &lt; 50ms</span>
+              </div>
+              <h3 class="stage-title">Allocation</h3>
+              <p class="stage-description">
+                Identify eligible substitutes using real-time timetable availability and workload constraints. Candidates are sorted equitably while enforcing the 2-duty daily ceiling.
+              </p>
             </div>
-            <h3 class="flowchart-node-title">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #047857;"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-              Print Staffroom Slips &amp; Archive Records
-            </h3>
-            <p class="flowchart-node-desc">
-              Instantly exports clean, formatted physical substitution slips for the staffroom noticeboard. Teacher availability matrices immediately update with substitution duty marked in red, and the day's record is locked in the historical archive.
-            </p>
+          </div>
+
+          <!-- Stage 04 -->
+          <div class="timeline-stage-item">
+            <div class="timeline-marker">04</div>
+            <div class="timeline-content">
+              <div class="stage-label-row">
+                <span class="stage-number">STAGE 04</span>
+                <span class="stage-timing">Before morning assembly</span>
+              </div>
+              <h3 class="stage-title">Final Roster</h3>
+              <p class="stage-description">
+                Review allocation suggestions with full manual override authority. Confirm assignments, export formatted noticeboard slips, and lock the day into the permanent audit archive.
+              </p>
+            </div>
           </div>
 
         </div>
@@ -224,281 +177,60 @@
       </div>
     </section>
 
-    <!-- 4. Real-World Complexity Scenarios Grid -->
-    <section class="section section-alt" id="scenarios">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="section-tag">Edge-Case Reliability</div>
-          <h2 class="section-title">Built for Real-World Scheduling Complexity</h2>
-          <p class="section-subtitle">
-            School administration is full of unpredictable situations. Here is how S.W.A.P. deterministically handles complex edge scenarios.
-          </p>
-        </div>
-
-        <div class="scenarios-grid">
-          
-          <!-- Scenario 1 -->
-          <div class="scenario-card">
-            <div class="scenario-top">
-              <span class="scenario-num">Scenario 01</span>
-              <span class="scenario-badge">Sequential Allocation</span>
-            </div>
-            <h3 class="scenario-title">Multiple Teachers Absent Simultaneously</h3>
-            <p class="scenario-text">
-              The engine orders all vacant periods chronologically. When a substitute candidate is assigned to period 2 for teacher A, that candidate is instantly marked busy for period 2 and cannot be double-booked for teacher B.
-            </p>
-          </div>
-
-          <!-- Scenario 2 -->
-          <div class="scenario-card">
-            <div class="scenario-top">
-              <span class="scenario-num">Scenario 02</span>
-              <span class="scenario-badge" style="color: #b91c1c; background: #fee2e2;">Explicit Alert</span>
-            </div>
-            <h3 class="scenario-title">Zero Free Substitutes Available</h3>
-            <p class="scenario-text">
-              When all faculty are teaching or absent during a specific bell, S.W.A.P. never assigns an impossible candidate. It explicitly marks status as "Unassigned" and highlights the period in red, alerting the coordinator immediately.
-            </p>
-          </div>
-
-          <!-- Scenario 3 -->
-          <div class="scenario-card">
-            <div class="scenario-top">
-              <span class="scenario-num">Scenario 03</span>
-              <span class="scenario-badge">Policy Guardrail</span>
-            </div>
-            <h3 class="scenario-title">Daily Duty Limit (Max 2) Reached</h3>
-            <p class="scenario-text">
-              Teachers who have already accepted 2 substitution periods in the day are automatically filtered out of default suggestions. They remain visible in manual override if an administrative emergency requires an exception.
-            </p>
-          </div>
-
-          <!-- Scenario 4 -->
-          <div class="scenario-card">
-            <div class="scenario-top">
-              <span class="scenario-num">Scenario 04</span>
-              <span class="scenario-badge">Coordinator Discretion</span>
-            </div>
-            <h3 class="scenario-title">Subject-Specialist Requirements</h3>
-            <p class="scenario-text">
-              While the default suggestion selects the candidate with the lowest duty count, the coordinator dropdown lists every genuinely free teacher for that period, allowing instant selection of a matching subject teacher.
-            </p>
-          </div>
-
-          <!-- Scenario 5 -->
-          <div class="scenario-card">
-            <div class="scenario-top">
-              <span class="scenario-num">Scenario 05</span>
-              <span class="scenario-badge">Granular Slots</span>
-            </div>
-            <h3 class="scenario-title">Partial-Day Availability &amp; Split Grids</h3>
-            <p class="scenario-text">
-              Faculty availability is tracked on a period-by-period basis rather than crude half-day approximations. Teachers arriving late or leaving early are only evaluated for periods they are scheduled on campus.
-            </p>
-          </div>
-
-          <!-- Scenario 6 -->
-          <div class="scenario-card">
-            <div class="scenario-top">
-              <span class="scenario-num">Scenario 06</span>
-              <span class="scenario-badge">Room Collision Check</span>
-            </div>
-            <h3 class="scenario-title">Concurrent Vacancies in the Same Bell</h3>
-            <p class="scenario-text">
-              If three teachers are absent during period 3, S.W.A.P. identifies three distinct, non-overlapping free faculty members, ensuring each room receives a dedicated supervising teacher.
-            </p>
-          </div>
-
-          <!-- Scenario 7 -->
-          <div class="scenario-card" style="grid-column: 1 / -1;">
-            <div class="scenario-top">
-              <span class="scenario-num">Scenario 07</span>
-              <span class="scenario-badge">Executive Authority</span>
-            </div>
-            <h3 class="scenario-title">Manual Coordinator Intervention &amp; Override</h3>
-            <p class="scenario-text">
-              S.W.A.P. operates on the philosophy that software should support human judgment, not supplant it. The academic coordinator can alter any suggestion, add special notes to the printed roster, and confirm the final schedule with total discretion.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. Technical Architecture Section -->
-    <section class="section" id="architecture">
-      <div class="container">
-        <div class="section-header text-center">
-          <div class="section-tag">System Architecture</div>
-          <h2 class="section-title">Designed for Institutional Data Control</h2>
-          <p class="section-subtitle">
-            How data flows through S.W.A.P.'s private on-premise application environment.
-          </p>
-        </div>
-
-        <div class="architecture-container">
-          <div class="arch-flow-grid">
-            <div class="arch-flow-box">
-              <div class="arch-flow-step">Input Layer</div>
-              <div class="arch-flow-name">Master Schedules</div>
-              <div class="arch-flow-tech">Structured PDF / JSON ingestion maps section timetables, room numbers, and teacher pairings.</div>
-            </div>
-
-            <div class="arch-flow-box">
-              <div class="arch-flow-step">Storage Layer</div>
-              <div class="arch-flow-name">SQLite Local DB</div>
-              <div class="arch-flow-tech">Stores active timetables, faculty rosters, and historical substitution logs directly on the local drive.</div>
-            </div>
-
-            <div class="arch-flow-box">
-              <div class="arch-flow-step">Processing Layer</div>
-              <div class="arch-flow-name">FastAPI Core Engine</div>
-              <div class="arch-flow-tech">Executes deterministic conflict checking, availability filtering, and workload balancing in milliseconds.</div>
-            </div>
-
-            <div class="arch-flow-box">
-              <div class="arch-flow-step">Presentation Layer</div>
-              <div class="arch-flow-name">Desktop Interface</div>
-              <div class="arch-flow-tech">Interactive React client with real-time review table and formatted printing for staffroom boards.</div>
-            </div>
-          </div>
-
-          <div class="arch-pillars-grid">
-            <div class="arch-pillar-item">
-              <div class="arch-pillar-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--brand-blue);"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                Local On-Premise Storage
-              </div>
-              <p class="arch-pillar-desc">Student section timetables and teacher contact details remain on the school's local administrative drive.</p>
-            </div>
-
-            <div class="arch-pillar-item">
-              <div class="arch-pillar-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #10b981;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-                Offline Morning Resilience
-              </div>
-              <p class="arch-pillar-desc">Routine daily substitution operations operate smoothly without internet connectivity, ensuring zero morning delays.</p>
-            </div>
-
-            <div class="arch-pillar-item">
-              <div class="arch-pillar-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #6366f1;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                Controlled Network Sharing
-              </div>
-              <p class="arch-pillar-desc">Can be deployed on a single coordinator PC or accessed across the school administrative intranet.</p>
-            </div>
-
-            <div class="arch-pillar-item">
-              <div class="arch-pillar-title">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #f59e0b;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                Full Institutional Custody
-              </div>
-              <p class="arch-pillar-desc">School leadership holds complete custody of historical logs with convenient local database backup capabilities.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 6. Final CTA Section -->
-    <section class="home-cta-section">
-      <div class="container">
-        <div class="cta-box">
-          <h2 class="cta-heading">Experience the 4-stage allocation workflow.</h2>
-          <p class="cta-subtext">
-            Contact our team to schedule an institutional demonstration configured with your school's actual period structure and faculty roster.
-          </p>
-          <a href="contact.html#demo-form" class="btn btn-primary btn-lg">
-            Request an Institutional Demo
-          </a>
-        </div>
+    <!-- 4. FINAL CTA -->
+    <section class="section section-alt text-center">
+      <div class="container-narrow">
+        <h2 class="section-title">Experience the 4-step workflow.</h2>
+        <p class="section-subtitle" style="margin-bottom: 28px;">
+          Contact our team to request a personalized demonstration of S.W.A.P. configured for your institution.
+        </p>
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          Request a Demo
+        </a>
       </div>
     </section>
 
   </main>
 
   <!-- =========================================================================
-       GLOBAL FOOTER
+       COMPACT GLOBAL FOOTER
        ========================================================================= -->
   <footer class="site-footer">
-    <div class="container footer-container">
+    <div class="container">
       <div class="footer-top">
-        
-        <div class="footer-brand">
-          <div class="footer-brand-header">
-            <img src="assets/logo.png" alt="S.W.A.P Logo" class="footer-logo" width="28" height="28">
-            <div>
-              <span class="footer-title">S.W.A.P</span>
-              <span class="footer-subtitle">Smart Workflow Allocation &amp; Placement</span>
-            </div>
-          </div>
-          <p class="footer-desc">
-            Teacher substitutions, without the administrative chaos. A structured timetable and substitution management system for modern school administration.
+        <div class="footer-brand-col">
+          <div class="footer-brand-title">S.W.A.P</div>
+          <p class="footer-brand-desc">
+            Smart Workflow Allocation &amp; Placement. Teacher substitutions, without the administrative chaos.
           </p>
-          <div class="footer-dev-tag">
-            Developed and supported by <strong>CORE Technologies</strong>.
+          <div class="footer-company-tag">A product by <strong>CORE Technologies</strong></div>
+        </div>
+
+        <div class="footer-links-group">
+          <div>
+            <div class="footer-col-title">Navigation</div>
+            <ul class="footer-nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="product.html">Product</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Direct Contact</div>
+            <ul class="footer-nav-list">
+              <li><a href="mailto:coretechnologiesofficial@gmail.com">coretechnologiesofficial@gmail.com</a></li>
+              <li><a href="tel:+919082777586">+91 9082777586</a></li>
+              <li><a href="https://wa.me/919082777586" target="_blank" rel="noopener noreferrer">WhatsApp Desk</a></li>
+            </ul>
           </div>
         </div>
-
-        <div class="footer-nav-col">
-          <h4 class="footer-heading">Product</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Overview</a></li>
-            <li><a href="product.html">Features &amp; Modules</a></li>
-            <li><a href="how-it-works.html">4-Step Workflow</a></li>
-            <li><a href="how-it-works.html#architecture">Technical Architecture</a></li>
-            <li><a href="index.html#faq">Frequently Asked Questions</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-nav-col">
-          <h4 class="footer-heading">Institutional</h4>
-          <ul class="footer-links">
-            <li><a href="index.html#case-study">Pawar Public School Pilot</a></li>
-            <li><a href="product.html#stakeholders">Stakeholder Benefits</a></li>
-            <li><a href="how-it-works.html#scenarios">Complex Scheduling Scenarios</a></li>
-            <li><a href="contact.html#demo-form">Request a Demo</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-contact-col">
-          <h4 class="footer-heading">Official Contact</h4>
-          <ul class="footer-contact-list">
-            <li>
-              <span class="contact-label">Email:</span>
-              <a href="mailto:coretechnologiesofficial@gmail.com" class="contact-link">
-                coretechnologiesofficial@gmail.com
-              </a>
-            </li>
-            <li>
-              <span class="contact-label">Telephone:</span>
-              <a href="tel:+919082777586" class="contact-link">
-                +91 9082777586
-              </a>
-            </li>
-            <li>
-              <span class="contact-label">WhatsApp:</span>
-              <a href="https://wa.me/919082777586" target="_blank" rel="noopener noreferrer" class="contact-link">
-                +91 9082777586 (Administrative Desk)
-              </a>
-            </li>
-            <li>
-              <span class="contact-label">Hours:</span>
-              <span style="color: #94a3b8; font-size: 0.85rem;">Mon - Sat, 8:00 AM - 6:00 PM IST</span>
-            </li>
-          </ul>
-        </div>
-
       </div>
 
       <div class="footer-bottom">
-        <p class="copyright-text">
-          &copy; 2026 CORE Technologies. All rights reserved.
-        </p>
-        <p class="footer-meta">
-          Institutional software engineered for school administration and academic continuity.
-        </p>
+        <div>&copy; 2026 CORE Technologies. All rights reserved.</div>
+        <div>School Administration &amp; Timetable Management System</div>
       </div>
     </div>
   </footer>

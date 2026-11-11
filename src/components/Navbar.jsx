@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import Button from './Button'
-
-export const DEMO_MAILTO_URL =
-  'mailto:coretechnologiesofficial@gmail.com?subject=SWAP%20Demo%20Request%20-%20[School%20Name]&body=Hello%20CORE%20Technologies%20Team%2C%0A%0AWe%20are%20interested%20in%20learning%20more%20about%20S.W.A.P%20for%20our%20institution.%0A%0ASchool%20Name%3A%0AContact%20Person%3A%0ADesignation%20(Principal%20%2F%20Vice%20Principal%20%2F%20Administrator)%3A%0APhone%20Number%3A%0AEstimated%20Faculty%20Size%3A%0A%0AThank%20you.'
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -38,16 +34,15 @@ export default function Navbar() {
         </nav>
 
         <div className="header-actions">
-          <Button href={DEMO_MAILTO_URL} variant="primary" size="sm" className="nav-cta">
+          <Link to="/contact" className="btn btn-primary btn-sm">
             Request a Demo
-          </Button>
+          </Link>
           <button
             className="mobile-toggle"
             onClick={toggleMobile}
             aria-label="Toggle navigation menu"
             aria-expanded={mobileOpen}
           >
-            <span className="hamburger-bar"></span>
             <span className="hamburger-bar"></span>
             <span className="hamburger-bar"></span>
           </button>
@@ -70,9 +65,9 @@ export default function Navbar() {
             Contact
           </NavLink>
           <div className="mobile-cta-wrapper">
-            <Button href={DEMO_MAILTO_URL} variant="primary" size="md" className="btn-block" onClick={closeMobile}>
+            <Link to="/contact" className="btn btn-primary btn-block" onClick={closeMobile}>
               Request a Demo
-            </Button>
+            </Link>
           </div>
         </nav>
       </div>

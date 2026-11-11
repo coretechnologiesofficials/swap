@@ -1305,7 +1305,7 @@ button {
 }
 
 /* ==========================================================================
-   MOBILE-FIRST RESPONSIVE BREAKPOINTS (360px - 1024px)
+   MOBILE-FIRST RESPONSIVE BREAKPOINTS
    ========================================================================== */
 
 @media (max-width: 1024px) {
@@ -1331,6 +1331,10 @@ button {
   .hero-left {
     align-items: center;
     text-align: center;
+  }
+  .hero-eyebrow {
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero-description {
     margin-left: auto;
@@ -1372,9 +1376,9 @@ button {
 
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    gap: 0;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
   .hero-left {
@@ -1382,25 +1386,43 @@ button {
     text-align: center;
   }
 
+  .hero-eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .hero-headline {
-    font-size: 2.5rem;
-    line-height: 1.15;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    line-height: 1.18;
+    margin-bottom: 18px;
   }
 
   .hero-description {
     font-size: 1rem;
-    margin: 0 auto 32px auto;
-    max-width: 480px;
+    margin: 0 auto 28px auto;
+    max-width: 420px;
   }
 
   .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
     justify-content: center;
   }
 
   .hero-indicators-row {
     justify-content: center;
-    gap: 16px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-sep {
+    display: none;
   }
 
   .hero-right {
@@ -1451,34 +1473,24 @@ button {
   }
 
   .hero-inner {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    gap: 32px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .hero-eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.65rem;
   }
 
   .hero-headline {
-    font-size: 2.1rem;
-    letter-spacing: -0.03em;
+    font-size: 1.75rem;
+    letter-spacing: -0.025em;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-sep {
-    display: none;
-  }
-
-  .hero-indicators-row {
-    gap: 8px;
-    flex-direction: column;
-    align-items: center;
+  .hero-description {
+    font-size: 0.95rem;
+    max-width: 340px;
   }
 
   .case-study-box {
@@ -1523,7 +1535,6 @@ button {
     gap: 6px;
   }
 }
-
 /* ==========================================================================
    TACTILE HOVER UX (Buttons & Cards)
    ========================================================================== */

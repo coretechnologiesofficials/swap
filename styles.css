@@ -359,22 +359,13 @@ button {
    ========================================================================== */
 
 .home-hero {
-  background: #080d1a;
+  background: #ffffff;
   padding: 0;
   position: relative;
   overflow: hidden;
 }
 
-.home-hero::before {
-  content: '';
-  position: absolute;
-  top: -120px;
-  right: -80px;
-  width: 520px;
-  height: 520px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
-  pointer-events: none;
-}
+
 
 .hero-inner {
   display: grid;
@@ -398,9 +389,9 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #60a5fa;
-  background: rgba(96, 165, 250, 0.1);
-  border: 1px solid rgba(96, 165, 250, 0.25);
+  color: var(--brand-blue);
+  background: var(--brand-blue-subtle);
+  border: 1px solid var(--brand-blue-border);
   padding: 5px 14px;
   border-radius: 9999px;
   margin-bottom: 28px;
@@ -411,18 +402,18 @@ button {
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.04em;
-  color: #f8fafc;
+  color: var(--text-primary);
   margin-bottom: 24px;
   max-width: none;
 }
 
 .hero-headline-accent {
-  color: #60a5fa;
+  color: var(--brand-blue);
 }
 
 .hero-description {
   font-size: 1.1rem;
-  color: #94a3b8;
+  color: var(--text-secondary);
   line-height: 1.65;
   max-width: 520px;
   margin: 0 0 36px 0;
@@ -454,16 +445,16 @@ button {
 
 .btn-ghost {
   background: transparent;
-  color: #cbd5e1;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
   padding: 14px 28px;
   font-size: 0.95rem;
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.07);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #f1f5f9;
+  background: var(--bg-secondary);
+  border-color: #cbd5e1;
+  color: var(--text-primary);
   transform: translateY(-2px);
 }
 
@@ -478,7 +469,7 @@ button {
 .hero-sep {
   width: 1px;
   height: 16px;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--border-light);
   flex-shrink: 0;
 }
 
@@ -488,16 +479,16 @@ button {
   gap: 7px;
   font-size: 0.84rem;
   font-weight: 500;
-  color: #64748b;
+  color: var(--text-secondary);
   transition: color 0.2s ease;
 }
 
 .hero-indicator-item:hover {
-  color: #94a3b8;
+  color: var(--text-primary);
 }
 
 .hero-indicator-item svg {
-  color: #3b82f6;
+  color: var(--brand-blue);
   flex-shrink: 0;
 }
 
@@ -509,18 +500,18 @@ button {
 }
 
 .hero-panel {
-  background: #0f1829;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid var(--border-light);
   border-radius: 14px;
   padding: 32px;
   width: 100%;
-  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px -8px rgba(15, 23, 42, 0.08);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
 .hero-panel:hover {
   transform: translateY(-4px);
-  box-shadow: 0 32px 72px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(96, 165, 250, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  box-shadow: 0 20px 48px -8px rgba(15, 23, 42, 0.12), 0 0 0 1px var(--brand-blue-border);
 }
 
 .hero-panel-logo-row {
@@ -536,14 +527,14 @@ button {
   object-fit: contain;
   flex-shrink: 0;
   border-radius: 8px;
-  background: rgba(37, 99, 235, 0.1);
+  background: var(--brand-blue-subtle);
   padding: 4px;
 }
 
 .hero-panel-product {
   font-size: 1.05rem;
   font-weight: 800;
-  color: #f1f5f9;
+  color: var(--text-primary);
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
@@ -557,7 +548,7 @@ button {
 
 .hero-panel-divider {
   height: 1px;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--border-subtle);
   margin-bottom: 20px;
 }
 
@@ -570,21 +561,21 @@ button {
 
 .hero-stat {
   padding: 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
   border-radius: 8px;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .hero-stat:hover {
-  background: rgba(96, 165, 250, 0.06);
-  border-color: rgba(96, 165, 250, 0.2);
+  background: var(--brand-blue-subtle);
+  border-color: var(--brand-blue-border);
 }
 
 .hero-stat-num {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #f1f5f9;
+  color: var(--text-primary);
   letter-spacing: -0.03em;
   line-height: 1.1;
   margin-bottom: 4px;
@@ -601,7 +592,7 @@ button {
   align-items: center;
   gap: 10px;
   padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-top: 1px solid var(--border-subtle);
   flex-wrap: wrap;
 }
 
@@ -1537,3 +1528,4 @@ button {
     width: 100%;
   }
 }
+

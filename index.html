@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -72,50 +72,85 @@
        ========================================================================= -->
   <main>
     
-    <!-- 1. HERO SECTION (Minimal, Typography-Driven, Mobile-First) -->
-    <section class="section home-hero">
-      <div class="container">
-        
-        <!-- Hero Brand Badge: Logo + Name + One-Liner (Hover UX) -->
-        <div class="hero-brand-badge">
-          <img src="assets/logo.png" alt="S.W.A.P Logo" class="hero-brand-logo" width="34" height="34">
-          <div class="hero-brand-text">
-            <span class="hero-brand-title">S.W.A.P</span>
-            <span class="hero-brand-tagline">Teacher substitutions, without the administrative chaos.</span>
+    <!-- 1. HERO SECTION (Split Layout, Bold Institutional Impact) -->
+    <section class="home-hero">
+      <div class="hero-inner container">
+
+        <!-- LEFT: Primary Message -->
+        <div class="hero-left">
+          <span class="hero-eyebrow">School Administration Software</span>
+
+          <h1 class="hero-headline">
+            Every absent teacher.<br>
+            Every period.<br>
+            <span class="hero-headline-accent">Covered.</span>
+          </h1>
+
+          <p class="hero-description">
+            S.W.A.P. checks timetables, validates availability, tracks workload, and allocates substitutes without double-bookings or guesswork.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="contact.html" class="btn btn-primary btn-lg hero-cta-primary">
+              Request a Demo
+            </a>
+            <a href="product.html" class="btn btn-ghost btn-lg">
+              Explore Features
+            </a>
+          </div>
+
+          <div class="hero-indicators-row">
+            <span class="hero-indicator-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Timetable-aware
+            </span>
+            <span class="hero-sep" aria-hidden="true"></span>
+            <span class="hero-indicator-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Workload tracking
+            </span>
+            <span class="hero-sep" aria-hidden="true"></span>
+            <span class="hero-indicator-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Zero conflicts
+            </span>
           </div>
         </div>
 
-        <h1 class="hero-headline">
-          Teacher substitutions.<br>Simplified.
-        </h1>
-
-        <p class="hero-description">
-          Manage faculty availability, teacher substitutions and workload distribution through one organised system.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="contact.html" class="btn btn-primary btn-lg">
-            Request a Demo
-          </a>
-          <a href="product.html" class="btn btn-secondary btn-lg">
-            Explore Features
-          </a>
-        </div>
-
-        <!-- 3 Compact Capability Indicators -->
-        <div class="hero-indicators-row">
-          <span class="hero-indicator-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Timetable-aware allocation
-          </span>
-          <span class="hero-indicator-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Workload tracking
-          </span>
-          <span class="hero-indicator-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Conflict validation
-          </span>
+        <!-- RIGHT: Stats Panel -->
+        <div class="hero-right" aria-hidden="true">
+          <div class="hero-panel">
+            <div class="hero-panel-logo-row">
+              <img src="assets/logo.png" alt="" class="hero-panel-logo" width="40" height="40">
+              <div>
+                <div class="hero-panel-product">S.W.A.P.</div>
+                <div class="hero-panel-desc">Smart Workflow Allocation &amp; Placement</div>
+              </div>
+            </div>
+            <div class="hero-panel-divider"></div>
+            <div class="hero-stats-grid">
+              <div class="hero-stat">
+                <div class="hero-stat-num">100+</div>
+                <div class="hero-stat-label">Faculty members</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">&lt;&nbsp;2 min</div>
+                <div class="hero-stat-label">Morning allocation</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">0</div>
+                <div class="hero-stat-label">Double-bookings</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">On-premise</div>
+                <div class="hero-stat-label">Your data, your servers</div>
+              </div>
+            </div>
+            <div class="hero-panel-footer">
+              <span class="hero-panel-badge">Active Deployment</span>
+              <span class="hero-panel-school">Pawar Public School, Dombivli</span>
+            </div>
+          </div>
         </div>
 
       </div>

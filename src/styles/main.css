@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    S.W.A.P. Official Marketing Website
    Minimalist Enterprise SaaS Stylesheet
    Parent: CORE Technologies
@@ -355,83 +355,275 @@ button {
 }
 
 /* ==========================================================================
-   HOMEPAGE: HERO SECTION (Mobile-First & Ultra-Restrained)
+   HOMEPAGE: HERO SECTION (Split Layout, Dark Background, Institutional)
    ========================================================================== */
 
 .home-hero {
-  padding: 72px 0 64px 0;
-  text-align: center;
-  background: var(--bg-primary);
+  background: #080d1a;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-category-label {
+.home-hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: center;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+/* LEFT COLUMN */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-eyebrow {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--brand-blue);
-  background: var(--brand-blue-subtle);
-  border: 1px solid var(--brand-blue-border);
-  padding: 5px 12px;
+  letter-spacing: 0.1em;
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  padding: 5px 14px;
   border-radius: 9999px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .hero-headline {
-  font-size: 3.25rem;
+  font-size: 3.75rem;
   font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  color: var(--text-primary);
-  max-width: 760px;
-  margin: 0 auto 20px auto;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: #f8fafc;
+  margin-bottom: 24px;
+  max-width: none;
+}
+
+.hero-headline-accent {
+  color: #60a5fa;
 }
 
 .hero-description {
-  font-size: 1.15rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  max-width: 620px;
-  margin: 0 auto 32px auto;
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  max-width: 520px;
+  margin: 0 0 36px 0;
 }
 
 .hero-buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 16px;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
 }
 
-/* 3 Compact Capability Indicators */
+.hero-cta-primary {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+}
+
+.hero-cta-primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(37, 99, 235, 0.45);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 14px 28px;
+  font-size: 0.95rem;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+/* Capability indicators strip */
 .hero-indicators-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 32px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border-subtle);
-  max-width: 680px;
-  margin: 0 auto;
+  gap: 20px;
   flex-wrap: wrap;
+}
+
+.hero-sep {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
 }
 
 .hero-indicator-item {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.88rem;
+  gap: 7px;
+  font-size: 0.84rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: #64748b;
+  transition: color 0.2s ease;
+}
+
+.hero-indicator-item:hover {
+  color: #94a3b8;
 }
 
 .hero-indicator-item svg {
-  color: var(--brand-blue);
+  color: #3b82f6;
   flex-shrink: 0;
 }
 
+/* RIGHT COLUMN: Stats Panel */
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-panel {
+  background: #0f1829;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 32px;
+  width: 100%;
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.hero-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 72px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(96, 165, 250, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.hero-panel-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.hero-panel-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: rgba(37, 99, 235, 0.1);
+  padding: 4px;
+}
+
+.hero-panel-product {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.hero-panel-desc {
+  font-size: 0.75rem;
+  color: #475569;
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+.hero-panel-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin-bottom: 20px;
+}
+
+.hero-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.hero-stat {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-stat:hover {
+  background: rgba(96, 165, 250, 0.06);
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+.hero-stat-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.hero-stat-label {
+  font-size: 0.75rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.hero-panel-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  flex-wrap: wrap;
+}
+
+.hero-panel-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  padding: 3px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.hero-panel-school {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+}
 /* ==========================================================================
    HOMEPAGE: PROBLEM VS SOLUTION (Clean Comparison Grid)
    ========================================================================== */
@@ -1080,24 +1272,45 @@ button {
   }
 
   .home-hero {
-    padding: 48px 0 40px 0;
+    padding: 0;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-left {
+    align-items: center;
+    text-align: center;
   }
 
   .hero-headline {
-    font-size: 2.25rem;
-    line-height: 1.2;
-    margin-bottom: 16px;
+    font-size: 2.5rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
   }
 
   .hero-description {
     font-size: 1rem;
-    margin-bottom: 28px;
+    margin: 0 auto 32px auto;
+    max-width: 480px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
   }
 
   .hero-indicators-row {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero-right {
+    display: none;
+  }
   }
 
   .comparison-grid {
@@ -1143,8 +1356,15 @@ button {
     padding: 0 16px;
   }
 
+  .hero-inner {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    gap: 32px;
+  }
+
   .hero-headline {
-    font-size: 2rem;
+    font-size: 2.1rem;
+    letter-spacing: -0.03em;
   }
 
   .hero-buttons {
@@ -1154,6 +1374,18 @@ button {
 
   .hero-buttons .btn {
     width: 100%;
+    justify-content: center;
+  }
+
+  .hero-sep {
+    display: none;
+  }
+
+  .hero-indicators-row {
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+  }
   }
 
   .case-study-box {
@@ -1188,99 +1420,9 @@ button {
   }
 }
 
-
 /* ==========================================================================
-   HERO BRAND BADGE & TACTILE HOVER UX
+   TACTILE HOVER UX (Buttons & Cards)
    ========================================================================== */
-
-.hero-brand-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: #ffffff;
-  border: 1px solid var(--border-light);
-  padding: 8px 18px 8px 10px;
-  border-radius: 9999px;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.05);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: default;
-}
-
-.hero-brand-badge:hover {
-  transform: translateY(-2px);
-  border-color: var(--brand-blue-border);
-  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.15);
-  background: #fafcff;
-}
-
-.hero-brand-logo {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
-  flex-shrink: 0;
-  transition: transform 0.25s ease;
-}
-
-.hero-brand-badge:hover .hero-brand-logo {
-  transform: scale(1.08) rotate(3deg);
-}
-
-.hero-brand-text {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-align: left;
-}
-
-.hero-brand-title {
-  font-size: 0.95rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  color: var(--text-primary);
-  padding-right: 10px;
-  border-right: 1px solid var(--border-light);
-}
-
-.hero-brand-tagline {
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-}
-
-/* Capability Indicators with Interactive Hover UX */
-.hero-indicator-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  padding: 8px 16px;
-  border-radius: 9999px;
-  border: 1px solid var(--border-subtle);
-  background: #ffffff;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: default;
-}
-
-.hero-indicator-item:hover {
-  transform: translateY(-2px);
-  background: var(--brand-blue-subtle);
-  border-color: var(--brand-blue-border);
-  color: var(--brand-blue);
-  box-shadow: 0 6px 14px -2px rgba(37, 99, 235, 0.12);
-}
-
-.hero-indicator-item svg {
-  color: var(--brand-blue);
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
-}
-
-.hero-indicator-item:hover svg {
-  transform: scale(1.15);
-}
 
 /* Button Lift & Glow Hover UX */
 .btn-primary:hover {
@@ -1348,21 +1490,50 @@ button {
   box-shadow: 0 10px 20px -4px rgba(15, 23, 42, 0.06);
 }
 
-@media (max-width: 640px) {
-  .hero-brand-badge {
-    border-radius: 12px;
-    padding: 10px 14px;
-    width: 100%;
-    max-width: 360px;
+/* ==========================================================================
+   HERO: TABLET RESPONSIVE (1024px) - Collapse right panel
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1fr 360px;
+    gap: 40px;
+  }
+
+  .hero-headline {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .hero-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
     justify-content: center;
   }
-  .hero-brand-text {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
+
+  .hero-indicators-row {
+    justify-content: center;
   }
-  .hero-brand-title {
-    border-right: none;
-    padding-right: 0;
+
+  .hero-right {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
   }
 }

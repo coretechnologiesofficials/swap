@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+﻿import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
@@ -38,50 +38,85 @@ export default function Home() {
   return (
     <div className="page-home">
       
-      {/* 1. HERO SECTION (Minimal, Typography-Driven, Mobile-First) */}
-      <section className="section home-hero">
-        <div className="container">
-          
-          {/* Hero Brand Badge: Logo + Name + One-Liner (Hover UX) */}
-          <div className="hero-brand-badge">
-            <img src="assets/logo.png" alt="S.W.A.P Logo" className="hero-brand-logo" width="34" height="34" />
-            <div className="hero-brand-text">
-              <span className="hero-brand-title">S.W.A.P</span>
-              <span className="hero-brand-tagline">Teacher substitutions, without the administrative chaos.</span>
+      {/* 1. HERO SECTION (Split Layout, Bold Institutional Impact) */}
+      <section className="home-hero">
+        <div className="hero-inner container">
+
+          {/* LEFT: Primary Message */}
+          <div className="hero-left">
+            <span className="hero-eyebrow">School Administration Software</span>
+
+            <h1 className="hero-headline">
+              Every absent teacher.<br />
+              Every period.<br />
+              <span className="hero-headline-accent">Covered.</span>
+            </h1>
+
+            <p className="hero-description">
+              S.W.A.P. checks timetables, validates availability, tracks workload, and allocates substitutes without double-bookings or guesswork.
+            </p>
+
+            <div className="hero-buttons">
+              <Link to="/contact" className="btn btn-primary btn-lg hero-cta-primary">
+                Request a Demo
+              </Link>
+              <Link to="/product" className="btn btn-ghost btn-lg">
+                Explore Features
+              </Link>
+            </div>
+
+            <div className="hero-indicators-row">
+              <span className="hero-indicator-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Timetable-aware
+              </span>
+              <span className="hero-sep" aria-hidden="true"></span>
+              <span className="hero-indicator-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Workload tracking
+              </span>
+              <span className="hero-sep" aria-hidden="true"></span>
+              <span className="hero-indicator-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Zero conflicts
+              </span>
             </div>
           </div>
 
-          <h1 className="hero-headline">
-            Teacher substitutions.<br />Simplified.
-          </h1>
-
-          <p className="hero-description">
-            Manage faculty availability, teacher substitutions and workload distribution through one organised system.
-          </p>
-
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary btn-lg">
-              Request a Demo
-            </Link>
-            <Link to="/product" className="btn btn-secondary btn-lg">
-              Explore Features
-            </Link>
-          </div>
-
-          {/* 3 Compact Capability Indicators */}
-          <div className="hero-indicators-row">
-            <span className="hero-indicator-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Timetable-aware allocation
-            </span>
-            <span className="hero-indicator-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Workload tracking
-            </span>
-            <span className="hero-indicator-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Conflict validation
-            </span>
+          {/* RIGHT: Stats Panel */}
+          <div className="hero-right" aria-hidden="true">
+            <div className="hero-panel">
+              <div className="hero-panel-logo-row">
+                <img src="assets/logo.png" alt="" className="hero-panel-logo" width="40" height="40" />
+                <div>
+                  <div className="hero-panel-product">S.W.A.P.</div>
+                  <div className="hero-panel-desc">Smart Workflow Allocation &amp; Placement</div>
+                </div>
+              </div>
+              <div className="hero-panel-divider"></div>
+              <div className="hero-stats-grid">
+                <div className="hero-stat">
+                  <div className="hero-stat-num">100+</div>
+                  <div className="hero-stat-label">Faculty members</div>
+                </div>
+                <div className="hero-stat">
+                  <div className="hero-stat-num">&lt;&nbsp;2 min</div>
+                  <div className="hero-stat-label">Morning allocation</div>
+                </div>
+                <div className="hero-stat">
+                  <div className="hero-stat-num">0</div>
+                  <div className="hero-stat-label">Double-bookings</div>
+                </div>
+                <div className="hero-stat">
+                  <div className="hero-stat-num">On-premise</div>
+                  <div className="hero-stat-label">Your data, your servers</div>
+                </div>
+              </div>
+              <div className="hero-panel-footer">
+                <span className="hero-panel-badge">Active Deployment</span>
+                <span className="hero-panel-school">Pawar Public School, Dombivli</span>
+              </div>
+            </div>
           </div>
 
         </div>

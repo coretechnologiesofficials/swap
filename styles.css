@@ -801,6 +801,7 @@ button {
 
 .faq-item {
   border-bottom: 1px solid var(--border-light);
+  transition: border-color 0.2s ease;
 }
 
 .faq-item:first-child {
@@ -812,7 +813,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px 4px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -821,8 +822,11 @@ button {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
-  transition: color 0.15s ease;
+  transition: color 0.2s ease;
   gap: 16px;
+  border-radius: 6px;
+  margin: 0 -4px;
+  width: calc(100% + 8px);
 }
 
 .faq-trigger:hover {
@@ -840,16 +844,35 @@ button {
   color: var(--brand-blue);
 }
 
+.faq-item.open .faq-trigger {
+  color: var(--brand-blue);
+}
+
+.faq-item.open {
+  border-bottom-color: var(--brand-blue-border);
+}
+
 .faq-content {
-  display: none;
-  padding-bottom: 20px;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-content-inner {
+  overflow: hidden;
   font-size: 0.92rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.65;
+  padding-bottom: 0;
+  transition: padding-bottom 0.32s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-item.open .faq-content {
-  display: block;
+  grid-template-rows: 1fr;
+}
+
+.faq-item.open .faq-content-inner {
+  padding-bottom: 20px;
 }
 
 /* ==========================================================================
@@ -1491,12 +1514,42 @@ button {
   }
   .footer-top {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 20px;
+  }
+  .site-footer {
+    padding: 32px 0 0 0;
+  }
+  .footer-brand-desc {
+    font-size: 0.82rem;
+    margin-bottom: 10px;
+    line-height: 1.55;
+  }
+  .footer-nav-col,
+  .footer-contact-col {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 8px);
+  }
+  .footer-nav-col {
+    margin-right: 12px;
+  }
+  .footer-col-title {
+    margin-bottom: 10px;
+  }
+  .footer-nav-list {
+    gap: 10px;
+  }
+  .footer-contact-list {
+    gap: 10px;
   }
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
-    gap: 6px;
+    gap: 3px;
+    padding: 12px 0;
+  }
+  .footer-bottom-tag {
+    display: none;
   }
 }
 /* ==========================================================================

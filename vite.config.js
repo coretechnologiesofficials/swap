@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import react from '../frontend/node_modules/@vitejs/plugin-react/dist/index.mjs'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],

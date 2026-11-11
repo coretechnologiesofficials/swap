@@ -1328,14 +1328,14 @@ button {
     padding-top: 64px;
     padding-bottom: 64px;
   }
-  .hero-left {
-    align-items: center;
-    text-align: center;
+  .home-hero .hero-left {
+    align-items: center !important;
+    text-align: center !important;
   }
-  .hero-eyebrow {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  .home-hero .hero-eyebrow {
+    display: block;
+    width: fit-content;
+    margin-left: auto !important;
   .hero-description {
     margin-left: auto;
     margin-right: auto;
@@ -1381,17 +1381,17 @@ button {
     padding-bottom: 56px;
   }
 
-  .hero-left {
-    align-items: center;
-    text-align: center;
+  .home-hero .hero-left {
+    align-items: center !important;
+    text-align: center !important;
   }
 
-  .hero-eyebrow {
-    margin-left: auto;
-    margin-right: auto;
+  .home-hero .hero-eyebrow {
+    display: block;
+    width: fit-content;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
-
-  .hero-headline {
     font-size: 2rem;
     line-height: 1.18;
     margin-bottom: 18px;
@@ -1620,3 +1620,35 @@ button {
   }
 }
 
+
+/* ==========================================================================
+   BROCHURE BUTTON
+   ========================================================================== */
+
+.btn-brochure {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+  padding: 14px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.btn-brochure:hover {
+  background: var(--bg-secondary);
+  border-color: #cbd5e1;
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -4px rgba(0, 0, 0, 0.08);
+}
+
+.btn-brochure svg {
+  flex-shrink: 0;
+  color: var(--brand-blue);
+}

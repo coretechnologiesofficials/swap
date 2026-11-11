@@ -1512,41 +1512,55 @@ button {
   .brand-subtitle {
     display: none;
   }
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
   .site-footer {
-    padding: 32px 0 0 0;
+    padding: 28px 0 0 0;
+  }
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 16px;
+  }
+  .footer-brand-col {
+    grid-column: 1 / -1;
   }
   .footer-brand-desc {
     font-size: 0.82rem;
-    margin-bottom: 10px;
-    line-height: 1.55;
-  }
-  .footer-nav-col,
-  .footer-contact-col {
-    display: inline-block;
-    vertical-align: top;
-    width: calc(50% - 8px);
-  }
-  .footer-nav-col {
-    margin-right: 12px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   .footer-col-title {
+    font-size: 0.65rem;
     margin-bottom: 10px;
   }
   .footer-nav-list {
-    gap: 10px;
+    gap: 8px;
+  }
+  .footer-nav-list a {
+    font-size: 0.85rem;
   }
   .footer-contact-list {
-    gap: 10px;
+    gap: 8px;
+  }
+  .footer-contact-val {
+    font-size: 0.82rem;
+  }
+  .footer-contact-label {
+    font-size: 0.6rem;
+  }
+  .footer-company-tag {
+    font-size: 0.75rem;
   }
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
-    gap: 3px;
-    padding: 12px 0;
+    gap: 2px;
+    padding: 10px 0;
+  }
+  .footer-bottom-copy {
+    font-size: 0.72rem;
   }
   .footer-bottom-tag {
     display: none;

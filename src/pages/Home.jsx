@@ -8,16 +8,31 @@ export default function Home() {
     <div className="page-home">
       
       {/* ---------------------------------------------------------------------
-          HERO SECTION (No giant screenshot; clean workflow visualization)
+          HERO SECTION WITH FLASHING PAWAR PUBLIC SCHOOL SPOTLIGHT
           --------------------------------------------------------------------- */}
       <section className="section home-hero">
         <div className="container">
           
-          <div className="hero-badge-wrap">
-            <span className="hero-badge">
-              <span className="badge-dot"></span>
-              ONE TEACHER ABSENT. HOW MANY DECISIONS?
-            </span>
+          {/* Pawar Public School Hero Spotlight (Attention-Grabbing Live Pilot) */}
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className="hero-pilot-spotlight">
+              <span className="hero-spotlight-pulse">
+                <span className="pulse-dot"></span>
+                LIVE PILOT
+              </span>
+              <div className="hero-spotlight-logo-wrap">
+                <img
+                  src="assets/PPS_Logo_dombivali.png"
+                  alt="Pawar Public School, Dombivli Logo"
+                  className="hero-spotlight-logo"
+                />
+              </div>
+              <div className="hero-spotlight-text">
+                <span>Pawar Public School, Dombivli</span>
+                <span className="hero-spotlight-divider">•</span>
+                <span className="hero-spotlight-sub">100+ Teaching Faculty</span>
+              </div>
+            </div>
           </div>
 
           <h1 className="hero-headline">
@@ -25,30 +40,25 @@ export default function Home() {
           </h1>
 
           <p className="hero-description">
-            A smarter way to manage teacher absences, allocate substitute periods and monitor faculty availability. Managing substitutions shouldn't disrupt the school day.
+            A smarter way to manage teacher absences, allocate substitute periods and monitor faculty availability. Tested and proven in live everyday school administration.
           </p>
 
           <div className="hero-buttons">
             <Button href={DEMO_MAILTO_URL} variant="primary" size="lg">
               Request a Product Demonstration
             </Button>
-            <Link to="/how-it-works" className="btn btn-secondary btn-lg">
-              How It Works
+            <Link to="/product" className="btn btn-secondary btn-lg">
+              Explore Features
             </Link>
           </div>
 
+          {/* Compact Trust Row */}
           <div className="hero-meta-row">
             <span className="meta-item">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
-              Deterministic Conflict Checking
-            </span>
-            <span className="meta-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              Fair Limit: Max 2 Duties / Day
+              100+ Teaching Faculty
             </span>
             <span className="meta-item">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -60,124 +70,35 @@ export default function Home() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
+              Max 2 Duties Daily Limit
+            </span>
+            <span className="meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
               Printable Morning Rosters
             </span>
-          </div>
-
-          {/* Clean Horizontal Workflow Diagram */}
-          <div className="workflow-diagram-wrap">
-            <div className="diagram-header">
-              <span className="diagram-title">Morning Operational Workflow</span>
-              <span className="diagram-tag">Automated Engine</span>
-            </div>
-
-            <div className="workflow-steps-horizontal">
-              
-              <div className="workflow-step-node">
-                <span className="node-number">01</span>
-                <h3 className="node-title">Absence Reported</h3>
-                <p className="node-desc">
-                  Faculty leaves logged via quick selection. Scheduled teaching slots identified immediately.
-                </p>
-              </div>
-
-              <div className="workflow-step-node">
-                <span className="node-number">02</span>
-                <h3 className="node-title">Faculty Availability</h3>
-                <p className="node-desc">
-                  Instant cross-grid scan of teacher timetables to identify who is genuinely free for each bell.
-                </p>
-              </div>
-
-              <div className="workflow-step-node">
-                <span className="node-number">03</span>
-                <h3 className="node-title">Substitution Allocation</h3>
-                <p className="node-desc">
-                  Automated conflict-free candidate matching with built-in workload balance and coordinator review.
-                </p>
-              </div>
-
-              <div className="workflow-step-node">
-                <span className="node-number">04</span>
-                <h3 className="node-title">Updated Schedule</h3>
-                <p className="node-desc">
-                  Confirmed substitution timetable ready before assembly, with printable physical sheets for staff.
-                </p>
-              </div>
-
-            </div>
           </div>
 
         </div>
       </section>
 
       {/* ---------------------------------------------------------------------
-          THE PROBLEM: THE DECISION CHAIN
+          THE PROBLEM & 3 PILLARS: PLAN, BALANCE, RECORD
           --------------------------------------------------------------------- */}
-      <section className="section decision-chain-section">
+      <section className="section" style={{ backgroundColor: 'var(--bg-slate-50)', borderTop: '1px solid var(--border-light)', borderBottom: '1px solid var(--border-light)' }}>
         <div className="container">
+          
           <div className="section-header">
-            <div className="section-tag">Operational Reality</div>
-            <h2 className="section-title">Every absence creates a chain of decisions.</h2>
+            <div className="section-tag">The Morning Reality</div>
+            <h2 className="section-title">One teacher absent. How many decisions?</h2>
             <p className="section-subtitle">
-              Coordinators handle this every morning under intense time pressure. Each step depends on the one before it.
+              Every morning, coordinators scramble to find available teachers without causing double-bookings or faculty burnout.
             </p>
           </div>
 
-          <div className="decision-grid">
-            
-            <div className="decision-card">
-              <span className="decision-num">STEP 01</span>
-              <h3 className="decision-title">Checking Multiple Timetables</h3>
-              <p className="decision-desc">
-                Cross-referencing teacher timetables against class section schedules across Grades 1 through 12.
-              </p>
-            </div>
-
-            <div className="decision-card">
-              <span className="decision-num">STEP 02</span>
-              <h3 className="decision-title">Finding Genuinely Available Teachers</h3>
-              <p className="decision-desc">
-                Filtering who is actually free during that specific bell without conflicting zero periods or lab duties.
-              </p>
-            </div>
-
-            <div className="decision-card">
-              <span className="decision-num">STEP 03</span>
-              <h3 className="decision-title">Avoiding Double-Bookings</h3>
-              <p className="decision-desc">
-                Ensuring no faculty member is assigned to two classrooms or conflicting duties simultaneously.
-              </p>
-            </div>
-
-            <div className="decision-card">
-              <span className="decision-num">STEP 04</span>
-              <h3 className="decision-title">Distributing Duties Fairly</h3>
-              <p className="decision-desc">
-                Preventing teacher fatigue by enforcing balanced substitution loads across all department members.
-              </p>
-            </div>
-
-            <div className="decision-card">
-              <span className="decision-num">STEP 05</span>
-              <h3 className="decision-title">Managing Last-Minute Changes</h3>
-              <p className="decision-desc">
-                Rapidly re-allocating classes when unexpected leave notices arrive minutes before the school bell.
-              </p>
-            </div>
-
-            <div className="decision-card">
-              <span className="decision-num">STEP 06</span>
-              <h3 className="decision-title">Maintaining Substitution Records</h3>
-              <p className="decision-desc">
-                Keeping an auditable chronological record of daily assignments for leadership and administrative reviews.
-              </p>
-            </div>
-
-          </div>
-
           {/* High-Impact Insight Callout */}
-          <div className="insight-callout-box">
+          <div className="insight-callout-box" style={{ marginBottom: 40 }}>
             <div className="insight-icon-col">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -194,224 +115,119 @@ export default function Home() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------------------------
-          INSTITUTIONAL PILOT: PAWAR PUBLIC SCHOOL, DOMBIVLI
-          --------------------------------------------------------------------- */}
-      <section className="pilot-section">
-        <div className="container">
-          <div className="pilot-card">
+          {/* The 3 Core Pillars Grid (Directly from Brochure Panel 3) */}
+          <div className="pillars-grid">
             
-            <div className="pilot-logo-box">
-              <img
-                src="assets/PPS_Logo_dombivali.png"
-                alt="Pawar Public School, Dombivli Logo"
-                className="pilot-logo-img"
-              />
-              <span className="pilot-logo-meta">Pawar Public School</span>
-              <span className="pilot-location">Dombivli, Maharashtra</span>
+            <div className="pillar-card">
+              <span className="pillar-tag">Pillar 01</span>
+              <h3 className="pillar-title">PLAN</h3>
+              <p className="pillar-desc">
+                Deterministic morning substitution engine eliminating timetable collisions and guesswork.
+              </p>
+              <ul className="pillar-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Conflict-free automated suggestions
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Full manual coordinator override
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Grades 1 to 12 coverage (Sections 1A–12E)
+                </li>
+              </ul>
             </div>
 
-            <div className="pilot-content">
-              <span className="pilot-badge">INSTITUTIONAL PILOT • 100+ TEACHERS</span>
-              <h2 className="pilot-heading">Designed for real school operations.</h2>
-              <p className="pilot-description">
-                SWAP is being piloted in association with Pawar Public School, Dombivli, marking an important step towards bringing structured digital substitution management into everyday school administration.
+            <div className="pillar-card">
+              <span className="pillar-tag">Pillar 02</span>
+              <h3 className="pillar-title">BALANCE</h3>
+              <p className="pillar-desc">
+                Real-time faculty availability calculation with an automated policy limit against burnout.
               </p>
-              <ul className="pilot-details-list">
-                <li>Active evaluation in a live academic environment with 100+ teaching faculty.</li>
-                <li>Comprehensive timetable support across Primary, Secondary, and Higher Secondary divisions.</li>
-                <li>Eliminating morning coordinator bottlenecks before the morning assembly.</li>
+              <ul className="pillar-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Instant live availability tracking
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Fair, transparent workload distribution
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Strict two-duty daily limit guardrail
+                </li>
+              </ul>
+            </div>
+
+            <div className="pillar-card">
+              <span className="pillar-tag">Pillar 03</span>
+              <h3 className="pillar-title">RECORD</h3>
+              <p className="pillar-desc">
+                Institutional continuity with permanent substitution history and physical staffroom slips.
+              </p>
+              <ul className="pillar-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Printable noticeboard daily rosters
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Permanent historical substitution logs
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Audit-ready records for school leadership
+                </li>
               </ul>
             </div>
 
           </div>
+
         </div>
       </section>
 
       {/* ---------------------------------------------------------------------
-          PILOT RESULTS & OPERATIONAL HIGHLIGHTS (Launch Ready)
+          CAMPUS ARCHITECTURE & DEMONSTRATION (Practical, Streamlined CTA)
           --------------------------------------------------------------------- */}
-      <section className="section pilot-results-section">
+      <section className="section" style={{ backgroundColor: '#ffffff', paddingTop: 64, paddingBottom: 64 }}>
         <div className="container">
-          <div className="section-header">
-            <div className="section-tag">Institutional Validation</div>
-            <h2 className="section-title">Verified Operational Capabilities</h2>
-            <p className="section-subtitle">
-              Engineered and tested against the daily operational demands of high-capacity school administration.
-            </p>
-          </div>
-
-          <div className="metrics-grid">
+          <div className="cta-box" style={{ maxWidth: 800, padding: '44px 36px' }}>
             
-            <div className="metric-card">
-              <div className="metric-val">100+</div>
-              <div className="metric-label">Teaching Faculty Handled</div>
-              <p className="metric-desc">
-                Seamlessly tracks and balances daily substitution assignments across primary, secondary, and higher secondary educators.
-              </p>
-            </div>
-
-            <div className="metric-card">
-              <div className="metric-val">Grades 1–12</div>
-              <div className="metric-label">Full Timetable Coverage</div>
-              <p className="metric-desc">
-                Handles section structures from 1A to 12E, zero periods, library blocks, lab sessions, and combined subject periods.
-              </p>
-            </div>
-
-            <div className="metric-card">
-              <div className="metric-val">Max 2 Duties</div>
-              <div className="metric-label">Daily Faculty Guardrail</div>
-              <p className="metric-desc">
-                Built-in policy engine strictly caps substitution duty at 2 periods per teacher per day, protecting staff morale and fairness.
-              </p>
-            </div>
-
-            <div className="metric-card">
-              <div className="metric-val">&lt; 2 Minutes</div>
-              <div className="metric-label">Morning Resolution Time</div>
-              <p className="metric-desc">
-                Substitutions are computed in seconds, producing clean, printable noticeboard slips ready before morning assembly.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------------------------
-          CAMPUS ARCHITECTURE: LOCAL, INDEPENDENT, PRACTICAL
-          --------------------------------------------------------------------- */}
-      <section className="section architecture-section">
-        <div className="container">
-          <div className="section-header">
-            <div className="section-tag">Campus Architecture</div>
-            <h2 className="section-title">Local. Independent. Practical.</h2>
-            <p className="section-subtitle">
-              A dedicated desktop and campus intranet installation. No continuous internet needed for routine planning.
+            <span className="section-tag" style={{ marginBottom: 12 }}>Local • Independent • Practical</span>
+            <h2 className="cta-heading" style={{ marginBottom: 12 }}>Ready for tomorrow morning's substitution routine.</h2>
+            <p className="cta-subtext" style={{ maxWidth: 620, margin: '0 auto 24px', lineHeight: 1.6 }}>
+              SWAP runs directly on your campus desktop and intranet. No continuous internet connection needed for routine planning — your school's student timetables and faculty records never leave your campus.
             </p>
-          </div>
 
-          {/* Architecture Flow Diagram */}
-          <div className="arch-flow-wrap">
-            <div className="arch-flow">
-              
-              <div className="arch-step-node">
-                <div className="arch-node-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <div className="arch-node-name">School Staff</div>
-                <div className="arch-node-sub">Principals &amp; Coordinators</div>
-              </div>
-
-              <div className="arch-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-
-              <div className="arch-step-node">
-                <div className="arch-node-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                  </svg>
-                </div>
-                <div className="arch-node-name">SWAP Desktop App</div>
-                <div className="arch-node-sub">Administrative Interface</div>
-              </div>
-
-              <div className="arch-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-
-              <div className="arch-step-node">
-                <div className="arch-node-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
-                  </svg>
-                </div>
-                <div className="arch-node-name">Local Engine Backend</div>
-                <div className="arch-node-sub">Conflict &amp; Allocation Core</div>
-              </div>
-
-              <div className="arch-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-
-              <div className="arch-step-node">
-                <div className="arch-node-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                  </svg>
-                </div>
-                <div className="arch-node-name">Campus Local Database</div>
-                <div className="arch-node-sub">Private Timetable Store</div>
-              </div>
-
-            </div>
-          </div>
-
-          <div className="arch-benefits-grid">
-            
-            <div className="arch-benefit-card">
-              <h3>Zero Cloud Dependency</h3>
-              <p>
-                Daily substitution planning never halts if campus broadband or cloud connectivity goes down. The local core runs reliably every morning.
-              </p>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: 16, flexWrap: 'wrap', marginBottom: 28 }}>
+              <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--brand-blue)', background: 'rgba(30, 58, 138, 0.06)', padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(30, 58, 138, 0.12)' }}>Zero Internet Dependency</span>
+              <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--brand-blue)', background: 'rgba(30, 58, 138, 0.06)', padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(30, 58, 138, 0.12)' }}>100% On-Campus Data Privacy</span>
+              <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--brand-blue)', background: 'rgba(30, 58, 138, 0.06)', padding: '5px 12px', borderRadius: 6, border: '1px solid rgba(30, 58, 138, 0.12)' }}>&lt; 50ms Processing Speed</span>
             </div>
 
-            <div className="arch-benefit-card">
-              <h3>Complete Data Sovereignty</h3>
-              <p>
-                Master timetables, teacher rosters, leave patterns, and substitution logs remain strictly on campus hardware under school administrative control.
-              </p>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: 14, flexWrap: 'wrap' }}>
+              <Button href={DEMO_MAILTO_URL} variant="primary" size="lg">
+                Request a Product Demonstration
+              </Button>
+              <a
+                href="https://wa.me/919082777586?text=Hello%20CORE%20Technologies%2C%20we%20are%20interested%20in%20a%20demonstration%20of%20SWAP%20for%20our%20school."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary btn-lg"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#16a34a' }}><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.03C9.36 7.03 9.09 7.09 8.87 7.33C8.65 7.57 8.02 8.16 8.02 9.36C8.02 10.56 8.9 11.72 9.02 11.89C9.15 12.05 10.76 14.53 13.22 15.6C15.27 16.48 15.69 16.31 16.13 16.27C16.57 16.23 17.56 15.69 17.76 15.11C17.96 14.53 17.96 14.04 17.9 13.94C17.84 13.84 17.68 13.78 17.44 13.66C17.2 13.54 16.02 12.96 15.8 12.88C15.58 12.8 15.42 12.76 15.25 13C15.09 13.24 14.62 13.78 14.48 13.94C14.34 14.11 14.2 14.13 13.96 14.01C13.72 13.89 12.95 13.64 12.03 12.82C11.31 12.18 10.83 11.39 10.69 11.15C10.55 10.91 10.67 10.78 10.8 10.66C10.91 10.55 11.05 10.37 11.17 10.23C11.29 10.09 11.33 9.99 11.41 9.83C11.49 9.67 11.45 9.53 11.39 9.41C11.33 9.29 10.87 8.16 10.67 7.69C10.49 7.23 10.3 7.29 10.15 7.28C10.02 7.28 9.86 7.27 9.7 7.27C9.53 7.27 9.53 7.03 9.53 7.03Z"/></svg>
+                WhatsApp Us
+              </a>
             </div>
 
-            <div className="arch-benefit-card">
-              <h3>Microsecond Query Performance</h3>
-              <p>
-                Checking cross-timetable teacher availability and slot conflicts takes less than 50 milliseconds across hundreds of class combinations.
-              </p>
+            <div style={{ marginTop: 20, fontSize: 13, color: 'var(--text-muted)' }}>
+              Direct Coordinator Line: <a href="tel:+919082777586" style={{ color: 'var(--text-primary)', fontWeight: 600, textDecoration: 'underline' }}>+91 9082777586</a> • Email: <a href="mailto:coretechnologiesofficial@gmail.com" style={{ color: 'var(--text-primary)', fontWeight: 600, textDecoration: 'underline' }}>coretechnologiesofficial@gmail.com</a>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------------------------
-          FINAL CTA SECTION
-          --------------------------------------------------------------------- */}
-      <section className="home-cta-section">
-        <div className="container">
-          <div className="cta-box">
-            <h2 className="cta-heading">Make teacher substitution management simpler.</h2>
-            <p className="cta-subtext">
-              See how SWAP can be configured for your school's specific timetable structure, period timings, and faculty roster.
-            </p>
-            <Button href={DEMO_MAILTO_URL} variant="primary" size="lg">
-              Request a Demo
-            </Button>
           </div>
         </div>
       </section>

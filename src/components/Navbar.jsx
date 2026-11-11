@@ -32,9 +32,6 @@ export default function Navbar() {
           <NavLink to="/how-it-works" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             How It Works
           </NavLink>
-          <NavLink to="/about" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-            About
-          </NavLink>
           <NavLink to="/contact" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
             Contact
           </NavLink>
@@ -68,9 +65,6 @@ export default function Navbar() {
           </NavLink>
           <NavLink to="/how-it-works" className={({ isActive }) => `mobile-link ${isActive ? 'active' : ''}`} onClick={closeMobile}>
             How It Works
-          </NavLink>
-          <NavLink to="/about" className={({ isActive }) => `mobile-link ${isActive ? 'active' : ''}`} onClick={closeMobile}>
-            About
           </NavLink>
           <NavLink to="/contact" className={({ isActive }) => `mobile-link ${isActive ? 'active' : ''}`} onClick={closeMobile}>
             Contact

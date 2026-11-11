@@ -513,6 +513,116 @@ img {
   text-align: center;
 }
 
+/* ==========================================================================
+   Hero Pawar Public School Spotlight (Flashing / Attention-Grabbing Badge)
+   ========================================================================== */
+.hero-pilot-spotlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+  border: 1.5px solid #93c5fd;
+  border-radius: 9999px;
+  padding: 6px 18px 6px 10px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 14px -2px rgba(37, 99, 235, 0.12), 0 0 0 1px rgba(37, 99, 235, 0.05);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  max-width: 100%;
+}
+
+.hero-pilot-spotlight:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px -2px rgba(37, 99, 235, 0.18);
+}
+
+.hero-spotlight-logo-wrap {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  border: 1px solid #dbeafe;
+}
+
+.hero-spotlight-logo {
+  height: 22px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+.hero-spotlight-pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1d4ed8;
+  background: rgba(37, 99, 235, 0.08);
+  padding: 3px 8px;
+  border-radius: 9999px;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #2563eb;
+  border-radius: 50%;
+  position: relative;
+  animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+.hero-spotlight-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-spotlight-tag {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.hero-spotlight-divider {
+  color: #93c5fd;
+}
+
+.hero-spotlight-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .hero-pilot-spotlight {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: var(--radius-md);
+    padding: 12px 14px;
+    gap: 8px;
+  }
+  .hero-spotlight-text {
+    flex-wrap: wrap;
+  }
+}
+
 .hero-badge-wrap {
   margin-bottom: 24px;
 }

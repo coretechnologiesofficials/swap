@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    S.W.A.P. Official Marketing Website
    Minimalist Enterprise SaaS Stylesheet
    Parent: CORE Technologies
@@ -380,7 +380,8 @@ button {
 .hero-left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-eyebrow {
@@ -1305,8 +1306,26 @@ button {
 }
 
 /* ==========================================================================
-   MOBILE-FIRST RESPONSIVE BREAKPOINTS
+   RESPONSIVE BREAKPOINTS (Mobile-First)
    ========================================================================== */
+
+/* Desktop: flip hero-left to left-aligned */
+@media (min-width: 861px) {
+  .hero-left {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .hero-description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+  .hero-indicators-row {
+    justify-content: flex-start;
+  }
+}
 
 @media (max-width: 1024px) {
   .stakeholders-clean-grid {
@@ -1328,14 +1347,14 @@ button {
     padding-top: 64px;
     padding-bottom: 64px;
   }
-  .home-hero .hero-left {
-    align-items: center !important;
-    text-align: center !important;
+  .hero-right {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
   }
-  .home-hero .hero-eyebrow {
-    display: block;
-    width: fit-content;
-    margin-left: auto !important;
+  .hero-headline {
+    font-size: 2.4rem;
+  }
   .hero-description {
     margin-left: auto;
     margin-right: auto;
@@ -1346,116 +1365,80 @@ button {
   .hero-indicators-row {
     justify-content: center;
   }
-  .hero-right {
-    max-width: 480px;
-    margin: 0 auto;
-    width: 100%;
-  }
 }
 
 @media (max-width: 768px) {
   .desktop-nav {
     display: none;
   }
-
   .mobile-toggle {
     display: flex;
   }
-
   .section {
     padding: 56px 0;
   }
-
   .section-title {
     font-size: 1.75rem;
   }
-
-  .home-hero {
-    padding: 0;
-  }
-
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 0;
-    padding-top: 56px;
-    padding-bottom: 56px;
+    padding-top: 52px;
+    padding-bottom: 52px;
   }
-
-  .home-hero .hero-left {
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  .home-hero .hero-eyebrow {
-    display: block;
-    width: fit-content;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+  .hero-headline {
     font-size: 2rem;
     line-height: 1.18;
     margin-bottom: 18px;
   }
-
   .hero-description {
     font-size: 1rem;
     margin: 0 auto 28px auto;
     max-width: 420px;
   }
-
   .hero-buttons {
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
     width: 100%;
+    gap: 10px;
   }
-
   .hero-buttons .btn {
     width: 100%;
     justify-content: center;
   }
-
   .hero-indicators-row {
     justify-content: center;
     gap: 10px;
     flex-direction: column;
     align-items: center;
   }
-
   .hero-sep {
     display: none;
   }
-
   .hero-right {
     display: none;
   }
-
   .comparison-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
   .case-study-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-
   .features-clean-grid {
     grid-template-columns: 1fr;
   }
-
   .pillars-summary-grid {
     grid-template-columns: 1fr;
   }
-
   .routine-contrast-row {
     grid-template-columns: 1fr;
   }
-
   .contact-options-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-
   .footer-top {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -1467,68 +1450,49 @@ button {
     padding: 0 16px;
     height: 60px;
   }
-
   .container {
     padding: 0 16px;
   }
-
   .hero-inner {
     padding-top: 44px;
     padding-bottom: 44px;
   }
-
-  .hero-eyebrow {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.65rem;
-  }
-
   .hero-headline {
     font-size: 1.75rem;
     letter-spacing: -0.025em;
   }
-
   .hero-description {
     font-size: 0.95rem;
-    max-width: 340px;
+    max-width: 320px;
   }
-
   .case-study-box {
     padding: 24px 16px;
   }
-
   .comparison-col {
     padding: 24px 16px;
   }
-
   .workflow-timeline {
     padding-left: 36px;
   }
-
   .workflow-timeline::before {
     left: 13px;
   }
-
   .timeline-marker {
     left: -36px;
     width: 28px;
     height: 28px;
     font-size: 0.75rem;
   }
-
   .timeline-content {
     padding: 16px;
   }
-
   .brand-subtitle {
     display: none;
   }
-
   .footer-top {
     grid-template-columns: 1fr;
     gap: 28px;
   }
-
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
@@ -1604,22 +1568,6 @@ button {
   border-color: #cbd5e1;
   box-shadow: 0 10px 20px -4px rgba(15, 23, 42, 0.06);
 }
-
-/* ==========================================================================
-   HERO: TABLET RESPONSIVE (1024px) - Collapse right panel
-   ========================================================================== */
-
-@media (max-width: 1024px) {
-  .hero-inner {
-    grid-template-columns: 1fr 360px;
-    gap: 40px;
-  }
-
-  .hero-headline {
-    font-size: 3rem;
-  }
-}
-
 
 /* ==========================================================================
    BROCHURE BUTTON

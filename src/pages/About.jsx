@@ -54,11 +54,14 @@ export default function About() {
 
             {/* Developer Card: CORE Technologies */}
             <div className="core-identity-card">
-              <div className="core-badge-box">
-                <span>CORE</span>
+              <div className="core-badge-box" style={{ backgroundColor: '#ffffff', border: '1px solid var(--border-light)', padding: 8 }}>
+                <img src="assets/core_mark.png" alt="CORE Technologies Symbol" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
               <div className="core-info-col">
-                <span className="section-tag" style={{ marginBottom: 8 }}>Software Development</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+                  <span className="section-tag" style={{ marginBottom: 0 }}>Product Engineering</span>
+                  <img src="assets/core_logo.png" alt="CORE Technologies" style={{ height: 24, width: 'auto', objectFit: 'contain' }} />
+                </div>
                 <p className="core-quote">
                   "CORE Technologies is an independent technology initiative focused on developing practical software solutions that address real-world operational challenges."
                 </p>

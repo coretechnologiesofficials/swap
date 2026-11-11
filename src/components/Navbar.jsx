@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <header className="site-header">
-      <div class="nav-container">
+      <div className="nav-container">
         <Link to="/" className="brand-link" onClick={closeMobile} aria-label="S.W.A.P Home">
           <img src="assets/logo.png" alt="S.W.A.P Logo" className="brand-logo" width="32" height="32" />
           <div className="brand-text">

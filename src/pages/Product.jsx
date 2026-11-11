@@ -11,10 +11,81 @@ export default function Product() {
       <section className="section product-hero">
         <div className="container">
           <div className="section-tag">System Capabilities</div>
-          <h1 className="section-title">Core capabilities designed for school administration.</h1>
+          <h1 className="section-title">Bring structure to substitution management.</h1>
           <p className="section-subtitle">
-            SWAP is built around the daily realities of school scheduling. It combines timetable ingestion, real-time availability calculation, and deterministic substitution matching into a single local workspace.
+            Select absent teachers. Review conflict-free suggestions. Print the morning roster. Built around the daily realities of school scheduling from Grades 1 to 12.
           </p>
+
+          {/* The 3 Core Pillars (PLAN • BALANCE • RECORD) */}
+          <div className="pillars-grid" style={{ marginTop: 40, marginBottom: 20 }}>
+            
+            <div className="pillar-card">
+              <span className="pillar-tag">Pillar 01</span>
+              <h3 className="pillar-title">PLAN</h3>
+              <p className="pillar-desc">
+                Deterministic morning substitution engine eliminating timetable collisions and guesswork.
+              </p>
+              <ul className="pillar-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Conflict-free automated suggestions
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Full manual coordinator override
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Grades 1 to 12 coverage (Sections 1A–12E)
+                </li>
+              </ul>
+            </div>
+
+            <div className="pillar-card">
+              <span className="pillar-tag">Pillar 02</span>
+              <h3 className="pillar-title">BALANCE</h3>
+              <p className="pillar-desc">
+                Real-time faculty availability calculation with an automated policy limit against burnout.
+              </p>
+              <ul className="pillar-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Instant live availability tracking
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Fair, transparent workload distribution
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Strict two-duty daily limit guardrail
+                </li>
+              </ul>
+            </div>
+
+            <div className="pillar-card">
+              <span className="pillar-tag">Pillar 03</span>
+              <h3 className="pillar-title">RECORD</h3>
+              <p className="pillar-desc">
+                Institutional continuity with permanent substitution history and physical staffroom slips.
+              </p>
+              <ul className="pillar-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Printable noticeboard daily rosters
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Permanent historical substitution logs
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Audit-ready records for school leadership
+                </li>
+              </ul>
+            </div>
+
+          </div>
         </div>
       </section>
 

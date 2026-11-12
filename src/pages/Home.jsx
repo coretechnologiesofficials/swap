@@ -60,9 +60,10 @@ export default function Home() {
               <Link to="/contact" className="btn btn-primary btn-lg hero-cta-primary">
                 Request a Demo
               </Link>
-              <Link to="/product" className="btn btn-ghost btn-lg">
-                Explore Features
-              </Link>
+              <a href="assets/SWAP_Product_Brochure_CORE_Technologies.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-brochure btn-lg">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                View Brochure
+              </a>
             </div>
 
             <div className="hero-indicators-row">
@@ -113,8 +114,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="hero-panel-footer">
-                <span className="hero-panel-badge">Active Deployment</span>
-                <span className="hero-panel-school">Pawar Public School, Dombivli</span>
+                <span className="hero-panel-badge">Current Institutional Pilot</span>
+                <span className="hero-panel-school">Active ICSE / ISC School Environment</span>
               </div>
             </div>
           </div>
@@ -122,23 +123,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. INSTITUTIONAL DEPLOYMENT (Pawar Public School) */}
+      {/* 2. INSTITUTIONAL PILOT (Anonymised) */}
       <section className="section section-alt">
         <div className="container">
           <div className="section-header text-center">
-            <span className="section-tag">Institutional Deployment</span>
-            <h2 className="section-title">Trusted in Everyday School Operations</h2>
+            <span className="section-tag">Current Institutional Pilot</span>
+            <h2 className="section-title">Developed and evaluated in a real school environment.</h2>
             <p className="section-subtitle">
-              S.W.A.P. is actively deployed at Pawar Public School, Dombivli, supporting faculty coordination across Grades 1 through 12.
+              S.W.A.P. is currently undergoing practical evaluation in a real school environment involving primary, secondary and higher-secondary academic sections.
             </p>
           </div>
 
           <div className="case-study-box">
             <div className="case-study-header">
-              <img src="assets/PPS_Logo_dombivali.png" alt="Pawar Public School, Dombivli Logo" className="case-study-logo" />
+              <div className="case-study-pilot-icon" aria-hidden="true">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
               <div className="case-study-title-col">
-                <span className="case-study-badge">Active Institutional Deployment</span>
-                <h3 className="case-study-school-title">Pawar Public School, Dombivli</h3>
+                <span className="case-study-badge">Current Institutional Pilot</span>
+                <h3 className="case-study-school-title">ICSE / ISC Affiliated Institution</h3>
                 <p className="case-study-school-meta">CISCE Affiliated (ICSE / ISC) &bull; Maharashtra &bull; 100+ Teaching Faculty &bull; Grades 1 to 12</p>
               </div>
             </div>
@@ -147,21 +150,21 @@ export default function Home() {
               <div className="case-study-col">
                 <div className="case-study-col-label">The Challenge</div>
                 <p className="case-study-col-text">
-                  Coordinating morning coverage across 100+ teaching staff and multi-grid timetables without schedule collisions or burdening the same cooperative teachers.
+                  Managing teacher absences across multiple grades, sections and overlapping timetables while maintaining fair faculty workload distribution across 100+ teaching staff.
                 </p>
               </div>
 
               <div className="case-study-col">
                 <div className="case-study-col-label">The Implementation</div>
                 <p className="case-study-col-text">
-                  An on-premise administrative desktop deployment that evaluates real-time faculty availability and enforces an automated 2-duty daily ceiling.
+                  A locally deployed administrative desktop application that helps coordinators identify available faculty, review conflict-aware substitution suggestions and manage daily substitution allocations.
                 </p>
               </div>
 
               <div className="case-study-col">
-                <div className="case-study-col-label">The Outcome</div>
+                <div className="case-study-col-label">The Objective</div>
                 <p className="case-study-col-text">
-                  Double-booking eliminated, workload transparently distributed, and verified staffroom substitution notices ready before morning assembly.
+                  To bring greater structure, visibility and consistency to everyday teacher substitution management across primary, secondary and higher-secondary sections.
                 </p>
               </div>
             </div>

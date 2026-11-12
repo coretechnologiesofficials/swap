@@ -705,7 +705,7 @@ button {
 }
 
 /* ==========================================================================
-   HOMEPAGE: INSTITUTIONAL CASE STUDY (Pawar Public School)
+   HOMEPAGE: INSTITUTIONAL PILOT (Case Study)
    ========================================================================== */
 
 .case-study-box {
@@ -729,6 +729,19 @@ button {
   height: 56px;
   width: auto;
   object-fit: contain;
+}
+
+.case-study-pilot-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-blue-subtle);
+  border: 1px solid var(--brand-blue-border);
+  border-radius: 12px;
+  color: var(--brand-blue);
+  flex-shrink: 0;
 }
 
 .case-study-title-col {
